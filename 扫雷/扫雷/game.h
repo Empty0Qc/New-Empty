@@ -21,5 +21,6 @@ int GetMineCount(char mine[ROWS][COLS],char show[ROWS][COLS],int x,int y);
 int MuchMine(char mine[ROWS][COLS],int x,int y);
 void Ass(char mine[ROWS][COLS],char show[ROWS][COLS],int x,int y,int *Num);
 int IsWin(char show[ROWS][COLS],int row,int col,int diff);
+void DisplayBoard1(char arr[ROWS][COLS],int row,int col);
 
 #endif //__GAME_H__

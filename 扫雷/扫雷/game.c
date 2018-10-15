@@ -35,7 +35,27 @@ void DisplayBoard(char arr[ROWS][COLS],int row,int col)
 		printf("\n");
 	}
 }
-
+void DisplayBoard1(char arr[ROWS][COLS],int row,int col)
+{
+	int i = 0;
+	int j = 0;
+	printf("       É¨À×        \n");
+	printf("-------------------\n");
+	for(i=0; i<=col; i++)
+	{
+		printf("%d ",i);
+	}
+	printf("\n");
+	for(i=1; i<=row; i++)
+	{
+		printf("%d ",i);
+		for(j=1; j<=col; j++)
+		{
+			printf("%c ",arr[i][j]);
+		}
+		printf("\n");
+	}
+}
 void SetMine(char arr[ROWS][COLS],int row,int col,int diff)
 {
 	int x = 0;
@@ -58,12 +78,6 @@ void FindMine(char mine[ROWS][COLS],char show[ROWS][COLS],int row,int col,int di
 	int x = 0;
 	int y = 0;
 	int safenum = 0;
-	//DisplayBoard(mine,ROW,COL);
-		/*if(IsWin(show,row,col,diff) == diff)
-		{
-			printf("ÄãÓ®ÁË£¡¹§Ï²£¡£¡\n");
-			break;
-		}*/
 	do	
 	{
 		printf("ÇëÊäÈëÒªÅÅ³ýµÄÎ»ÖÃ>:");
@@ -83,7 +97,7 @@ void FindMine(char mine[ROWS][COLS],char show[ROWS][COLS],int row,int col,int di
 				else
 				{
 					printf("ºÜ±§Ç¸£¬Äã±»Õ¨ËÀÁË£¡\n");
-					DisplayBoard(mine, ROW, COL);
+					DisplayBoard1(mine, ROW, COL);
 					return;
 				}
 			}
