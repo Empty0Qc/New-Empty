@@ -15,12 +15,12 @@
 
 void InitBoard(char arr[ROWS][COLS],int row,int col,char set);
 void DisplayBoard(char arr[ROWS][COLS],int row,int col);
+void DisplayBoard1(char arr[ROWS][COLS],int row,int col);
 void SetMine(char arr[ROWS][COLS],int row,int col,int diff);
 void FindMine(char mine[ROWS][COLS],char show[ROWS][COLS],int row,int col,int diff);
 int GetMineCount(char mine[ROWS][COLS],char show[ROWS][COLS],int x,int y);
 int MuchMine(char mine[ROWS][COLS],int x,int y);
 void Ass(char mine[ROWS][COLS],char show[ROWS][COLS],int x,int y,int *Num);
 int IsWin(char show[ROWS][COLS],int row,int col,int diff);
-void DisplayBoard1(char arr[ROWS][COLS],int row,int col);
 
 #endif //__GAME_H__
