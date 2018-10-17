@@ -41,7 +41,10 @@ flag2:
 		printf("那么你快告诉我你是什么？\n");
 		scanf("%s",input);
 		if(strcmp("我是猪",input) == 0)
+		{
 			system("shutdown -a");
+		    printf("恭喜你成功选择自己的属相,主动承认现实!\n");
+		}
 		else
 			goto flag2;
 		break;
