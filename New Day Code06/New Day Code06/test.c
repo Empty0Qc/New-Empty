@@ -1,62 +1,123 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#define _CRT_SECURE_NO_WARNINGS 1
+
+#include<stdio.h>//hanoi汉诺塔
+#include<windows.h>
+#define N 1000
+void gotoxy(int x, int y);
+void colorxy(int x, int y);
+void hanoi(int n,char a,char b,char c);
+void move(int n,char a,char b);
+void Print();
+void Printpan(int n);
+int a1=0,a2=0,a3=0;
 int main()
 {
-    char gamer;  // 玩家出拳
-    int computer;  // 电脑出拳
-    int result;  // 比赛结果
-    // 为了避免玩一次游戏就退出程序，可以将代码放在循环中
-    while (1){
-        printf("这是一个猜拳的小游戏，请输入你要出的拳头：\n");
-        printf("A:剪刀\nB:石头\nC:布\nD:不玩了\n");
-        scanf("%c%*c",&gamer);
-        switch (gamer){
-            case 65:  //A
-            case 97:  //a
-                gamer=4;
-                break;
-            case 66:  //B
-            case 98:  //b
-                gamer=7;
-                break;
-            case 67:  //C
-            case 99:  //c
-                gamer=10;
-                break;
-            case 68:  //D
-            case 100:  //d
-                return 0;
-          
-            default:
-                printf("你的选择为 %c 选择错误,退出...\n",gamer);
-                getchar();
-                system("cls"); // 清屏
-                return 0;
-                break;
-        }
-      
-        srand((unsigned)time(NULL));  // 随机数种子
-        computer=rand()%3;  // 产生随机数并取余，得到电脑出拳
-        result=(int)gamer+computer;  // gamer 为 char 类型，数学运算时要强制转换类型
-        printf("电脑出了");
-        switch (computer)
-        {
-            case 0:printf("剪刀\n");break; //4    1
-            case 1:printf("石头\n");break; //7  2
-            case 2:printf("布\n");break;   //10 3
-        }
-        printf("你出了");
-        switch (gamer)
-        {
-            case 4:printf("剪刀\n");break;
-            case 7:printf("石头\n");break;
-            case 10:printf("布\n");break;
-        }
-        if (result==6||result==7||result==11) printf("你赢了!");
-        else if (result==5||result==9||result==10) printf("电脑赢了!");
-        else printf("平手");
-        system("pause>nul&&cls");  // 暂停并清屏
-    }
+    int n=3;
+    char a='A',b='B',c='C';
+    colorxy(0x0b,0x0b);
+    printf("Please input n(0~9):");
+    scanf("%d",&n);
+	a1=n;
+    Print();
+    gotoxy(0,11-n);
+    Printpan(n);
+    Sleep(500);
+    gotoxy(0,12);
+	hanoi(n,a,b,c);// 把n个盘借助C，A-->B
     return 0;
+}
+void gotoxy(int x, int y)
+{
+   COORD coord = {x, y};
+   SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
+void colorxy(int x, int y)
+{
+	HANDLE hOut;
+	hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hOut, x|y);
+}
+void hanoi(int n,char a,char b,char c)
+{
+    if(n==1)
+        move(n,a,b);//把盘n，A-->B
+    else
+    {
+        hanoi(n-1,a,c,b);//把盘n上的n-1个盘借助B，A-->C
+        move(n,a,b);//把盘n，A-->B
+        hanoi(n-1,c,b,a);//把n-1个盘借助A，C-->B
+    }
+}
+void move(int n,char a,char b)
+{
+    int static count=1;
+ 
+    int j;
+    switch(a)
+    {
+    	case 'A':a1--;gotoxy(21+n,10-a1);
+    	for(j=0;j<n*2;j++)printf(" \b\b");//删掉将要移走的盘
+    	gotoxy(22,10-a1);colorxy(0x0a,0x0c);printf("|");//把删掉的|加上
+		break;
+    	case 'B':a2--;gotoxy(38+n,10-a2);
+    	for(j=0;j<n*2;j++)printf(" \b\b");//删掉将要移走的盘
+    	gotoxy(39,10-a2);colorxy(0x0a,0x0c);printf("|");//把删掉的|加上
+		break;
+    	case 'C':a3--;gotoxy(55+n,10-a3);
+    	for(j=0;j<n*2;j++)printf(" \b\b");//删掉将要移走的盘
+    	gotoxy(56,10-a3);colorxy(0x0a,0x0c);printf("|");//把删掉的|加上
+		break;
+    }
+    gotoxy(15,13);
+    printf("%3d.    move %d, %c-->%c\n",count++,n,a,b);
+    switch(b)
+    {
+    	case 'A':gotoxy(23-n,10-a1);a1++;
+    	colorxy(0x0a,0x0a);
+    	for(j=0;j<n*2-1;j++)
+		printf("=");gotoxy(0,22);Sleep(N);
+		break;
+    	case 'B':gotoxy(40-n,10-a2);a2++;
+    	colorxy(0x0a,0x0a);
+    	for(j=0;j<n*2-1;j++)
+		printf("=");gotoxy(0,22);Sleep(N);
+		break;
+    	case 'C':gotoxy(57-n,10-a3);a3++;
+    	colorxy(0x0a,0x0a);
+    	for(j=0;j<n*2-1;j++)
+		printf("=");gotoxy(0,22);Sleep(N);
+		break;
+		//colorxy(0x06,0x06);
+    }
+ 
+}
+void Print()
+{
+	printf("\n\n");
+	colorxy(0x0a,0x0c);
+    printf("\t\t      |                |                |     \n");
+    printf("\t\t      |                |                |     \n");
+    printf("\t\t      |                |                |     \n");
+    printf("\t\t      |                |                |     \n");
+    printf("\t\t      |                |                |     \n");
+    printf("\t\t      |                |                |     \n");
+    printf("\t\t      |                |                |     \n");
+    printf("\t\t      |                |                |     \n");
+    printf("\t\t -----A-----      -----B-----      -----C-----\n");
+    colorxy(0x0c,0x0c);gotoxy(22,11);printf("A");
+    gotoxy(39,11);printf("B");
+    gotoxy(56,11);printf("C");
+    colorxy(0x0a,0x0a);
+}
+void Printpan(int n)
+{
+	int i,j;
+	for(i=1;i<=n;i++)
+    {
+        for(j=1;j<=23-i;j++)
+            printf(" ");
+        for(j=1;j<=i*2-1;j++)
+            printf("=");
+        printf("\n");
+    }
 }

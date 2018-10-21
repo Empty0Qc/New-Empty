@@ -1,17 +1,112 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include <stdio.h>
 #include <math.h>
+#include <assert.h>
 
-//3.0版本直接在二进制位上进行操作，更加快捷
-int main()
+
+//4.
+//有一个字符数组的内容为:"student a am i",
+//请你将数组的内容改为"i am a student".
+//要求：
+//不能使用库函数。
+//只能开辟有限个空间（空间个数和字符串的长度无关）。
+int my_strlen(const char *str)
 {
-	int a = 10;
-	int b = 20;
-	printf("%d\n",(((a&b)+(a^b))>>1));
-	return 0 ;
+	int len = 0;
+	assert(str);
+	while(*str != '\0')
+	{
+		str++;
+		len++;
+	}
+	return len;
 }
 
-//2.不使用（a+b）/2这种方式，求两个数的平均值。
+void reverse(char *left,char *right)
+{
+	assert(left);
+	assert(right);
+	while(left < right)
+	{
+		char tmp = *left;
+		tmp = *left;
+		*left = *right;
+		*right = tmp;
+		left++;
+		right--;
+	}
+}
+void str_reverse(char *str)
+{
+	int len = my_strlen(str);
+	assert(str);
+	reverse(str,str+len-1);
+	while (*str != '\0')
+	{
+		char *p = str;
+		while ((*str != ' ') && (*str != '\0'))
+		{
+			str++;
+		}
+		reverse(p, str - 1);
+		if (*str != '\0')
+		{
+			str++;
+		}
+	}
+}
+int main()
+{
+	char str[] = "student a am i";
+	str_reverse(str);
+	printf("%s\n",str);
+	return 0;
+}
+//3.编程实现：
+//一组数据中只有一个数字出现了一次。其他所有数字都是成对出现的。
+//请找出这个数字。（使用位运算）
+//int main()
+//{
+//	int i,j;
+//	int arr[7] = {0};
+//	int len = sizeof(arr)/sizeof(arr[0]);
+//	printf("请逐个输入>:\n");
+//	for(i=0; i<len; i++)
+//	{
+//		scanf("%d",&arr[i]);
+//	}
+//	for(i=0; i<len; i++)
+//	{
+//		for(j=i+1; j<len; j++)
+//		{
+//			if(!(arr[i]^arr[j]))
+//			{
+//				arr[i] = 0;
+//				arr[j] = 0;
+//			}
+//		}
+//	}
+//	for(i=0; i<len; i++)
+//	{
+//		if(arr[i])
+//		{
+//			printf("%d\n",arr[i]);
+//		}
+//	}
+//	return 0;
+//}
+
+
+
+//3.0版本直接在二进制位上进行操作，更加快捷
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	printf("%d\n",(((a&b)+(a^b))>>1));
+//	return 0 ;
+//}
+//2.0不使用（a+b）/2这种方式，求两个数的平均值。
 //a的值+a与b的差值的一半来求平均值的方法
 //int main()
 //{
@@ -21,7 +116,8 @@ int main()
 //	return 0 ;
 //}
 
-//二进制位右移一位求除  a+b的值若是过大将存在溢出情况
+//二进制位右移一位求除 
+//1.0a+b的值若是过大将存在溢出情况,所以归类为错误不宜使用程序
 //int main()
 //{
 //	int a = 10;
@@ -93,5 +189,3 @@ int main()
 		可以控制输出左对齐或右对齐, 即在"%"和字母之间加入一个"-" 号可说明输出为左对齐, 否则为右对齐。 
 		例如:   %-7d  表示输出7位整数左对齐 
 			    %-10s 表示输出10个字符左对齐*/
-
-
