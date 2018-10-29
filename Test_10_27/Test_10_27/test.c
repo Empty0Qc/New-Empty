@@ -7,9 +7,8 @@ int my_strlen(char *str)
 {
 	int i = 0;
 	assert(str);
-	while(*str)
+	while(*str++)
 	{
-		str++;
 		i++;
 	}
 	return i;
