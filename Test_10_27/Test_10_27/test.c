@@ -13,11 +13,23 @@ int my_strlen(char *str)
 	}
 	return i;
 }
+void my_memset(char *str)
+{
+	assert(str);
+	while(*str)
+	{
+		*str = 0;
+		str++;
+	}
+}
 
 int main()
 {
 	char arr[] = "abcdef";
-	printf("arr的字符串长度为%d\n",my_strlen(arr));
+	printf("%s\n",arr);
+	my_memset(arr);
+	printf("%s\n",arr);
+	//printf("arr的字符串长度为%d\n",my_strlen(arr));
 	return 0;
 }
 

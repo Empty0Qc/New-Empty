@@ -7,7 +7,6 @@
 问共有多少种不同的方法？*/
 
 #include <stdio.h>
-
 {
 	return 0;
 }
