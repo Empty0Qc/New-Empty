@@ -6,16 +6,12 @@
 3、对信息操作，包括，添加学生信息，修改，删除，
    按学号、姓名查询学生信息
 4、能进行科目成绩排序，科目分数段查询
-附data文件实例：
-001  小黑  语文  60.00  英语  70.00  数学  90.00
-002  小天  语文  70.00  英语  90.00  数学  80.00
-003  小芳  语文  80.00  英语  80.00  数学  70.00
-004  小鱼  语文  90.00  英语  70.00  数学 100.00
 ***************************************************************/
  
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
+#include<windows.h>
  
 //链表结点结构体声明
 typedef struct subjects
@@ -56,6 +52,10 @@ int main()
 	
 	head = LoadInfo();
 	ptr = head->next;
+	system("mode con cols=50 lines=25");
+	system("color f0");
+	system("date /T");
+	system("TIME /T");
  
 	//创建菜单，进入选择循环
 	while(1)
@@ -172,7 +172,7 @@ pstu LoadInfo()
 	float score2;
 	float score3;
 	
-	char filename[] = "C:\\Users\\Administrator\\Desktop\\New Code\\GitHub\\New-Empty\\C\\C\\Debug\\data.txt";  //文件名,此处为简化编程，采用固定地址名称，未作输入
+	char filename[] = "C:\\Users\\Administrator\\Desktop\\New Code\\GitHub\\New-Empty\\C\\C\\data.txt";  //文件名,此处为简化编程，采用固定地址名称，未作输入
    	FILE *fp; 
 	pstu head,ptr;
 	
@@ -219,7 +219,7 @@ pstu LoadInfo()
 void PrintMenu()    
 {
 	printf("***************************************\n");
-	printf("           枫枫学生信息管理系统        \n");
+	printf("             学生信息管理系统          \n");
 	printf("***************************************\n");
 	putchar('\n');
 	printf("菜单\n");
@@ -639,13 +639,14 @@ void SaveQuit(pstu x)
 {
 	pstu head,ptr;
 	FILE *fp;
-	char filename[] = "D:\\编程学习\\编程实践\\c语言课程设计1 学生信息管理\\data.txt";
+	char filename[] = "C:\\Users\\Administrator\\Desktop\\New Code\\GitHub\\New-Empty\\C\\C\\data.txt";
 	head = x;
 	ptr = head->next;
  
 	if( NULL == (fp = fopen(filename,"w")) ) 			//判断文件是否存在及可读
 	{ 
 		printf("error!"); 
+		system("pause");
 		exit(0); 
 	} 
 	
@@ -659,4 +660,5 @@ void SaveQuit(pstu x)
 	} 
 	
     fclose(fp);    
+		system("pause");
 }
