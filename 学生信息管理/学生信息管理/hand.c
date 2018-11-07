@@ -8,10 +8,8 @@ pstu LoadInfo()
 	char name[20];
 	char sub1[20];
 	char sub2[20];
-	char sub3[20];
 	float score1;
 	float score2;
-	float score3;
 	
 	char filename[] = "C:\\Users\\Administrator\\Desktop\\New Code\\GitHub\\New-Empty\\学生信息管理\\学生信息管理.txt";  //文件名,此处为简化编程，采用固定地址名称，未作输入
    	FILE *fp; 
@@ -33,9 +31,9 @@ pstu LoadInfo()
 	while (!feof(fp)) 
 	{ 
 		fscanf(fp,"%d %s %s %f %s %f %s %f\n",&num,&name,
-			  &sub1,&score1,&sub2,&score2,&sub3,&score3); //读取一行，采用格式化读取，避免了其他各种读取方法的数据处理问题
+			  &sub1,&score1,&sub2,&score2); //读取一行，采用格式化读取，避免了其他各种读取方法的数据处理问题
 																//该方法缺点明显，对数据格式要求教研，故data文件规定数据格式
-		ptr->next = (pstu)malloc(SIZE);
+		ptr->next = (pstu)malloc(SIZE);  //学生结构体的大小
 		ptr = ptr->next;
 		ptr->next = NULL;
 		
@@ -45,8 +43,6 @@ pstu LoadInfo()
 		ptr->subject[0].score = score1;
 		strcpy(ptr->subject[1].name,sub2);
 		ptr->subject[1].score = score2;
-		strcpy(ptr->subject[2].name,sub3);
-		ptr->subject[2].score = score3;
 		
 	} 
 	
@@ -63,7 +59,7 @@ pstu AddStu(pstu x)
 {
 	char namestu[20];
 	char *p;
-	char subname1[20],subname2[20],subname3[20];
+	char subname1[20],subname2[20];
 	pstu head,ptr;
 	
 	head = x;
@@ -109,16 +105,6 @@ pstu AddStu(pstu x)
 	printf("请输入添加学生的科目2成绩：");
 	scanf("%f",&ptr->subject[1].score);
 	getchar();
- 
-	printf("请输入添加学生的科目3名称：");
-	scanf("%s",&subname3);
-	getchar();
-	p = subname3;
-	strcpy(ptr->subject[2].name,p);
- 
-	printf("请输入添加学生的科目3成绩：");
-	scanf("%f",&ptr->subject[2].score);
-	getchar();
 	
 	putchar('\n');
 	return head;
@@ -162,7 +148,7 @@ pstu RwrStu(pstu x)
 {
 	char namestu[20];
 	char *p;
-	char subname1[20],subname2[20],subname3[20];
+	char subname1[20],subname2[20];
 	int num;
 	pstu head,ptr;
 	
@@ -205,16 +191,6 @@ pstu RwrStu(pstu x)
 			scanf("%f",&ptr->subject[1].score);
 			getchar();
  
-			printf("请输入修改学生的科目3名称：");
-			scanf("%s",subname3);
-			getchar();
-			p = subname3;
-			strcpy(ptr->subject[2].name,p);
- 
-			printf("请输入修改学生的科目3成绩：");
-			scanf("%f",&ptr->subject[2].score);
-			getchar();
- 
 			printf("该学生信息已修改！\n\n");
 			break;
 		}
@@ -241,8 +217,9 @@ void FindStu(pstu x,char y)
 		if( ptr->num == (int)y)		//因主函数中为节省空间，学号输入采用char数据，故强行准换
 		{
 			printf("已找到该学生信息!\n如下：");
-			printf("%03d  %s  %s  %5.2f  %s  %5.2f  %s  %5.2f\n",
-				ptr->num,ptr->name,ptr->subject[0].name,ptr->subject[0].score,ptr->subject[1].name,ptr->subject[1].score,ptr->subject[2].name,ptr->subject[2].score);			break;			//注意此处找到并输出信息后要手动退出循环
+			printf("%03d  %s  %s  %5.2f  %s  %5.2f\n",
+				ptr->num,ptr->name,ptr->subject[0].name,ptr->subject[0].score,ptr->subject[1].name,ptr->subject[1].score);			
+			break;			//注意此处找到并输出信息后要手动退出循环
 		}
 		else
 		{
@@ -267,8 +244,6 @@ void Count(pstu x,char *y,float q,float p)
 	head = x;
 	ptr = head->next;
 	strcpy(name,y);
-	
-	//printf("%s %5.2f %5.2f\n",name,q,p); 	//检测输入参数的传递，调试程序用
  
 	while( ptr != NULL)			//开始查找统计，科目查找用strcmp函数比较科目字符串,返回值0为字符串相等
 	{															//此处while循环体中，重复的查找步骤太多，应设置科目匹配flag，参照rank()函数
@@ -288,15 +263,6 @@ void Count(pstu x,char *y,float q,float p)
 				flag++;
 			}
 		}
-		if( strcmp(name,ptr->subject[2].name) == 0 )
-		{
-			if( q <= ptr->subject[2].score && ptr->subject[2].score<= p )
-			{
-				printf("%03d  %s  %s  %5.2f\n",ptr->num,ptr->name,ptr->subject[2].name,ptr->subject[2].score);
-				flag++;
-			}
-		}
-		
 		ptr = ptr->next;
 	}
  
@@ -311,156 +277,114 @@ void Count(pstu x,char *y,float q,float p)
 //同理参数问题
 //链表排序问题，此处用交换结点数据方法，还有其他多种排序方法
 //如，交换结点，辅助指针数组排序(未实现，过程繁杂)，插入法排序等
-void Rank(pstu x,char *y)     
-{
-	pstu head,ptr,qtr;
-	char name[20];
-	char len=0;
-	char flag=0;    				//简化算法,设置科目查找结果判断值,flag=0表示科目输入为未知科目，不存在
-	int i=0;													//i、j循环次数控制参数
-	int j=0;  
-	char temp_name[20];			//数据交换时的暂存信息变量
-	float temp0,temp1,temp2;
-	int temp_num;
- 
-	strcpy(name,y);
-	head = x;
- 
-	ptr = head->next;
-	while( ptr != NULL)   			//测链表长度,不包括表头结点
-	{
-		ptr = ptr->next;
-		len++;
-	}
-	ptr = head->next;  			//指针ptr用过之后记得回原位
-				
- 
-	//开始查找科目
-	if( strcmp(name,ptr->subject[0].name) == 0)	flag=1; 
-	if( strcmp(name,ptr->subject[1].name) == 0)	flag=2;
-	if( strcmp(name,ptr->subject[2].name) == 0)	flag=3;
-	if( flag == 0)
-	{
-		printf("未找到该科目!");
-		return;
-	}
-	
-	//开始排序,冒泡法比较各结点数据
-	//此处3个并列的if用switch case更清晰结构
-	if( n == 1 )
-	{
-		for( i=0;i<len;i++)
-		{
-			ptr = head->next->next;	//每一次内循环之后，ptr、qtr必然在最后两个节点上
-			qtr = head->next;		//故在进行内循环之前，要重新复位ptr、qtr
-			for( j=0;j<len-i-1;j++)
-			{
-				if( qtr->subject[0].score < ptr->subject[0].score )
-				{
-					temp_num = qtr->num;	//交换数据,因数据格式(科目顺序)明确规定，故不再做科目名称的替换
-					strcpy(temp_name,qtr->name);
-					temp0 = qtr->subject[0].score;
-					temp1 = qtr->subject[1].score;
-					temp2 = qtr->subject[2].score;
-					
-					qtr->num = ptr->num;
-					strcpy(qtr->name,ptr->name);
-					qtr->subject[0].score = ptr->subject[0].score;
-					qtr->subject[1].score = ptr->subject[1].score;
-					qtr->subject[2].score = ptr->subject[2].score;
-					
-					ptr->num = temp_num;
-					strcpy(ptr->name,temp_name);
-					ptr->subject[0].score = temp0;
-					ptr->subject[1].score = temp1;
-					ptr->subject[2].score = temp2;
-				}
-				qtr = qtr->next;
-				ptr = ptr->next;
-			}
-		}
-	}
-	
-	if( n == 2 )
-	{
-		for( i=0;i<len;i++)
-		{
-			ptr = head->next->next;
-			qtr = head->next;
-			for( j=0;j<len-i-1;j++)
-			{
-				if( qtr->subject[1].score < ptr->subject[1].score )
-				{
-					temp_num = qtr->num;
-					strcpy(temp_name,qtr->name);
-					temp0 = qtr->subject[0].score;
-					temp1 = qtr->subject[1].score;
-					temp2 = qtr->subject[2].score;
-					
-					qtr->num = ptr->num;
-					strcpy(qtr->name,ptr->name);
-					qtr->subject[0].score = ptr->subject[0].score;
-					qtr->subject[1].score = ptr->subject[1].score;
-					qtr->subject[2].score = ptr->subject[2].score;
-					
-					ptr->num = temp_num;
-					strcpy(ptr->name,temp_name);
-					ptr->subject[0].score = temp0;
-					ptr->subject[1].score = temp1;
-					ptr->subject[2].score = temp2;
-				}
-				qtr = qtr->next;
-				ptr = ptr->next;
-			}
-		}
-	}
-	
-	if( n == 3 )
-	{
-		for( i=0;i<len;i++)
-		{
-			ptr = head->next->next;
-			qtr = head->next;
-			for( j=0;j<len-i-1;j++)
-			{
-				if( qtr->subject[2].score < ptr->subject[2].score )
-				{
-					temp_num = qtr->num;
-					strcpy(temp_name,qtr->name);
-					temp0 = qtr->subject[0].score;
-					temp1 = qtr->subject[1].score;
-					temp2 = qtr->subject[2].score;
-					
-					qtr->num = ptr->num;
-					strcpy(qtr->name,ptr->name);
-					qtr->subject[0].score = ptr->subject[0].score;
-					qtr->subject[1].score = ptr->subject[1].score;
-					qtr->subject[2].score = ptr->subject[2].score;
-					
-					ptr->num = temp_num;
-					strcpy(ptr->name,temp_name);
-					ptr->subject[0].score = temp0;
-					ptr->subject[1].score = temp1;
-					ptr->subject[2].score = temp2;
-				}
-				qtr = qtr->next;
-				ptr = ptr->next;
-			}
-		}
-	}
- 
-	//输出排序过后的链表
-	ptr = head->next;
-	while( ptr != NULL )
-	{
-		printf("%03d  %s  %s  %5.2f  %s  %5.2f  %s  %5.2f\n",
-			  ptr->num,ptr->name,ptr->subject[0].name,ptr->subject[0].score,
-			  ptr->subject[1].name,ptr->subject[1].score,
-			  ptr->subject[2].name,ptr->subject[2].score);
-		ptr = ptr->next;
-	}
-}
- 
+//void Rank(pstu x,char *y)     
+//{
+//	pstu head,ptr,qtr;
+//	char name[20];
+//	char len=0;
+//	char flag=0;    				//简化算法,设置科目查找结果判断值,flag=0表示科目输入为未知科目，不存在
+//	int i=0;													//i、j循环次数控制参数
+//	int j=0;  
+//	char temp_name[20];			//数据交换时的暂存信息变量
+//	float temp0,temp1;
+//	int temp_num;
+// 
+//	strcpy(name,y);
+//	head = x;
+// 
+//	ptr = head->next;
+//	while( ptr != NULL)   			//测链表长度,不包括表头结点
+//	{
+//		ptr = ptr->next;
+//		len++;
+//	}
+//	ptr = head->next;  			//指针ptr用过之后记得回原位
+//				
+// 
+//	//开始查找科目
+//	if( strcmp(name,ptr->subject[0].name) == 0)	flag=1; 
+//	if( strcmp(name,ptr->subject[1].name) == 0)	flag=2;
+//	if( flag == 0)
+//	{
+//		printf("未找到该科目!");
+//		return;
+//	}
+//	
+//	//开始排序,冒泡法比较各结点数据
+//	//此处2个并列的if用switch case更清晰结构
+//	if( n == 1 )
+//	{
+//		for( i=0;i<len;i++)
+//		{
+//			ptr = head->next->next;	//每一次内循环之后，ptr、qtr必然在最后两个节点上
+//			qtr = head->next;		//故在进行内循环之前，要重新复位ptr、qtr
+//			for( j=0;j<len-i-1;j++)
+//			{
+//				if( qtr->subject[0].score < ptr->subject[0].score )
+//				{
+//					temp_num = qtr->num;	//交换数据,因数据格式(科目顺序)明确规定，故不再做科目名称的替换
+//					strcpy(temp_name,qtr->name);
+//					temp0 = qtr->subject[0].score;
+//					temp1 = qtr->subject[1].score;
+//					
+//					qtr->num = ptr->num;
+//					strcpy(qtr->name,ptr->name);
+//					qtr->subject[0].score = ptr->subject[0].score;
+//					qtr->subject[1].score = ptr->subject[1].score;
+//					
+//					ptr->num = temp_num;
+//					strcpy(ptr->name,temp_name);
+//					ptr->subject[0].score = temp0;
+//					ptr->subject[1].score = temp1;
+//				}
+//				qtr = qtr->next;
+//				ptr = ptr->next;
+//			}
+//		}
+//	}
+//	
+//	if( n == 2 )
+//	{
+//		for( i=0;i<len;i++)
+//		{
+//			ptr = head->next->next;
+//			qtr = head->next;
+//			for( j=0;j<len-i-1;j++)
+//			{
+//				if( qtr->subject[1].score < ptr->subject[1].score )
+//				{
+//					temp_num = qtr->num;
+//					strcpy(temp_name,qtr->name);
+//					temp0 = qtr->subject[0].score;
+//					temp1 = qtr->subject[1].score;
+//					
+//					qtr->num = ptr->num;
+//					strcpy(qtr->name,ptr->name);
+//					qtr->subject[0].score = ptr->subject[0].score;
+//					qtr->subject[1].score = ptr->subject[1].score;
+//					
+//					ptr->num = temp_num;
+//					strcpy(ptr->name,temp_name);
+//					ptr->subject[0].score = temp0;
+//					ptr->subject[1].score = temp1;
+//				}
+//				qtr = qtr->next;
+//				ptr = ptr->next;
+//			}
+//		}
+//	}
+//	//输出排序过后的链表
+//	ptr = head->next;
+//	while( ptr != NULL )
+//	{
+//		printf("%03d  %s  %s  %5.2f  %s  %5.2f\n",
+//			  ptr->num,ptr->name,
+//			  ptr->subject[0].name,ptr->subject[0].score,
+//			  ptr->subject[1].name,ptr->subject[1].score);
+//		ptr = ptr->next;
+//	}
+//}
+// 
  
 //保存文件并退出，文件操作
 void SaveQuit(pstu x)    
@@ -480,10 +404,10 @@ void SaveQuit(pstu x)
 	
 	while(ptr != NULL)						//遍历链表结点，按data约定格式输出数据
 	{
-		fprintf(fp,"%03d  %s  %s  %5.2f  %s  %5.2f  %s  %5.2f\r",
-			ptr->num,ptr->name,ptr->subject[0].name,ptr->subject[0].score,
-			ptr->subject[1].name,ptr->subject[1].score,
-			ptr->subject[2].name,ptr->subject[2].score);			
+		fprintf(fp,"%03d  %s  %s  %5.2f  %s  %5.2f\r",
+			ptr->num,ptr->name,
+			ptr->subject[0].name,ptr->subject[0].score,
+			ptr->subject[1].name,ptr->subject[1].score);			
 		ptr = ptr->next;
 	} 
 	

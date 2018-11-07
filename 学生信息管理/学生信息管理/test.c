@@ -11,7 +11,7 @@ void PrintMenu()
 	printf("\025 1、信息管理\n");
 	printf("\025 2、信息查询\n");
 	printf("\025 3、成绩统计\n");
-	printf("\025 4、成绩排序\n");	
+/*	printf("\025 4、成绩排序\n");*/	
 	printf("\025 5、保存退出\n");
 }
 
@@ -94,19 +94,19 @@ int Project()
 				system("cls");
 				break;
 			}
-		case 4:
-			{
-				//成绩排序
-				system("cls");
-				printf("欢迎进入成绩排序版块，请输入科目：");
-				scanf("%s",&subname);
-				getchar();
-				Rank(head,subname);  			//排序并输出
-				printf("\n请输入回车键返回主菜单！\n");
-				getchar();
-				system("cls");
-				break;
-			}
+		//case 4:
+		//	{
+		//		//成绩排序
+		//		system("cls");
+		//		printf("欢迎进入成绩排序版块，请输入科目：");
+		//		scanf("%s",&subname);
+		//		getchar();
+		//		Rank(head,subname);  			//排序并输出
+		//		printf("\n请输入回车键返回主菜单！\n");
+		//		getchar();
+		//		system("cls");
+		//		break;
+		//	}
 		case 5:
 			{
 				//保存退出
@@ -126,10 +126,30 @@ int Project()
 
 int main()
 {
+	char input1[20] = {0};
+	char input2[20] = {0};
 	system("mode con cols=50 lines=25");
 	system("color f0");
 	system("date /T");
 	system("TIME /T");
-	Project();
+	while(1)
+	{
+		printf("用户名>:");
+		scanf("%s",input1);
+		if(!strcmp("屈琛",input1)||!strcmp("root",input1))
+		{
+			printf("密码>:");
+			scanf("%s",input2);
+			if((!strcmp("屈琛",input1)&&!strcmp("123456",input2))||(!strcmp("root",input1)&&!strcmp("root",input2)))
+			{
+				Project();
+				break;
+			}
+			else
+				printf("密码错误!\n");
+		}
+		else
+			printf("用户名错误!\n");
+	}
 	return 0;
 }

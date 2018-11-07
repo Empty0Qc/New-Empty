@@ -21,7 +21,7 @@ typedef struct student
 {
 	int num;
 	char name[20];
-	sub  subject[3];
+	sub  subject[2];
 	struct student* next;
 }stu,*pstu;
 
@@ -33,6 +33,6 @@ pstu DeleStu(pstu );
 pstu RwrStu(pstu );
 void FindStu(pstu , char );
 void Count(pstu ,char * ,float ,float );
-void Rank(pstu ,char * );
+//void Rank(pstu ,char * );
 void SaveQuit(pstu );
 int Project();
