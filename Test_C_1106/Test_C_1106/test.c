@@ -5,39 +5,65 @@
 #include <string.h>
 
 //7.实现memmove
-//int main()
-//{
-//	return 0;
-//}
 
-
-//6.实现memcpy 
-void my_memcpy(char *dst,char *src,int count)
+void my_memmove(void *dst, void *src, size_t tLen)
 {
-	char *p = dst;
-	char *q = src;
-	assert(dst);
-	assert(src);
-
-	while(count-- && *q != '\0')
-	{
-		*p++ = *q++;
-	}
-	while(*p++)
-	{
-		;
-	}
-	*p = '\0';
+	char *pDst = (char*)dst;
+	char *pSrc = (char*)src;
+	assert(pDst != NULL && pSrc != NULL);
+    if((pDst>pSrc) && (pDst<(pSrc+tLen)))
+    {
+        // 特殊处理
+        char* p = pSrc + tLen - 1;
+        char* q = pDst + tLen - 1;
+        while(p >= pSrc)
+        {
+            *q-- = *p--;
+        }
+    }
+    else
+    {
+        // 不需要特殊处理可直接用memcpy
+        memcpy(pDst, pSrc, tLen);
+    }
 }
 
 int main()
 {
 	char *src = "dsd";
 	char dst[100] = "abcdefgh";
-	my_memcpy(dst,dst,5);
+	my_memmove(dst+3,dst+2,4);
 	printf("%s\n",dst);
 	return 0;
 }
+//6.实现memcpy 
+
+//void my_memcpy(char *dst,char *src,int count)
+//{
+//	char *p = dst;
+//	char *q = src;
+//	assert(dst);
+//	assert(src);
+//
+//	while(count-- && *q != '\0')
+//	{
+//		*p++ = *q++;
+//	}
+//	while(*p++)
+//	{
+//		;
+//	}
+//	*p = '\0';
+//}
+
+//int main()
+//{
+//	char *src = "dsd";
+//	char dst[100] = "abcdefgh";
+//	my_memcpy(dst+3,dst+2,4);
+//	printf("%s\n",dst);
+//	return 0;
+//}
 ////5.实现strcmp
 //
 //int my_strcmp(char const  *p,char const  *q)
