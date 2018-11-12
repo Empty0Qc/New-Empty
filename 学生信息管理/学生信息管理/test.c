@@ -11,7 +11,6 @@ void PrintMenu()
 	printf("\025 1、信息管理\n");
 	printf("\025 2、信息查询\n");
 	printf("\025 3、成绩统计\n");
-/*	printf("\025 4、成绩排序\n");*/	
 	printf("\025 5、保存退出\n");
 }
 
@@ -94,19 +93,7 @@ int Project()
 				system("cls");
 				break;
 			}
-		//case 4:
-		//	{
-		//		//成绩排序
-		//		system("cls");
-		//		printf("欢迎进入成绩排序版块，请输入科目：");
-		//		scanf("%s",&subname);
-		//		getchar();
-		//		Rank(head,subname);  			//排序并输出
-		//		printf("\n请输入回车键返回主菜单！\n");
-		//		getchar();
-		//		system("cls");
-		//		break;
-		//	}
+	
 		case 5:
 			{
 				//保存退出

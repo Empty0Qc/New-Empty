@@ -1,3 +1,5 @@
+#ifndef __HAND_H__
+#define __HAND_H__
 #define _CRT_SECURE_NO_WARNINGS 1
 
  
@@ -26,13 +28,16 @@ typedef struct student
 }stu,*pstu;
 
 //函数申明
-pstu LoadInfo();
-void PrintMenu();
-pstu AddStu(pstu );
-pstu DeleStu(pstu );
-pstu RwrStu(pstu );
-void FindStu(pstu , char );
-void Count(pstu ,char * ,float ,float );
-//void Rank(pstu ,char * );
-void SaveQuit(pstu );
-int Project();
+int Project();//打印主程序界面
+pstu LoadInfo();//加载data数据 ，文件操作
+void PrintMenu();//打印主菜单
+pstu AddStu(pstu );//增
+pstu DeleStu(pstu );//删
+pstu RwrStu(pstu );//改
+void FindStu(pstu , char );//查
+void Count(pstu ,char * ,float ,float );//统计
+void SaveQuit(pstu );//txt文档保存
+
+
+
+#endif //__HAND_H__

@@ -30,7 +30,7 @@ pstu LoadInfo()
 	
 	while (!feof(fp)) 
 	{ 
-		fscanf(fp,"%d %s %s %f %s %f %s %f\n",&num,&name,
+		fscanf(fp,"%d %s %s %f %s %f\n",&num,&name,
 			  &sub1,&score1,&sub2,&score2); //读取一行，采用格式化读取，避免了其他各种读取方法的数据处理问题
 																//该方法缺点明显，对数据格式要求教研，故data文件规定数据格式
 		ptr->next = (pstu)malloc(SIZE);  //学生结构体的大小
@@ -273,119 +273,6 @@ void Count(pstu x,char *y,float q,float p)
 }
  
  
-//学科成绩排名,采用交换数据的方法,参数为链表指针，科目名称
-//同理参数问题
-//链表排序问题，此处用交换结点数据方法，还有其他多种排序方法
-//如，交换结点，辅助指针数组排序(未实现，过程繁杂)，插入法排序等
-//void Rank(pstu x,char *y)     
-//{
-//	pstu head,ptr,qtr;
-//	char name[20];
-//	char len=0;
-//	char flag=0;    				//简化算法,设置科目查找结果判断值,flag=0表示科目输入为未知科目，不存在
-//	int i=0;													//i、j循环次数控制参数
-//	int j=0;  
-//	char temp_name[20];			//数据交换时的暂存信息变量
-//	float temp0,temp1;
-//	int temp_num;
-// 
-//	strcpy(name,y);
-//	head = x;
-// 
-//	ptr = head->next;
-//	while( ptr != NULL)   			//测链表长度,不包括表头结点
-//	{
-//		ptr = ptr->next;
-//		len++;
-//	}
-//	ptr = head->next;  			//指针ptr用过之后记得回原位
-//				
-// 
-//	//开始查找科目
-//	if( strcmp(name,ptr->subject[0].name) == 0)	flag=1; 
-//	if( strcmp(name,ptr->subject[1].name) == 0)	flag=2;
-//	if( flag == 0)
-//	{
-//		printf("未找到该科目!");
-//		return;
-//	}
-//	
-//	//开始排序,冒泡法比较各结点数据
-//	//此处2个并列的if用switch case更清晰结构
-//	if( n == 1 )
-//	{
-//		for( i=0;i<len;i++)
-//		{
-//			ptr = head->next->next;	//每一次内循环之后，ptr、qtr必然在最后两个节点上
-//			qtr = head->next;		//故在进行内循环之前，要重新复位ptr、qtr
-//			for( j=0;j<len-i-1;j++)
-//			{
-//				if( qtr->subject[0].score < ptr->subject[0].score )
-//				{
-//					temp_num = qtr->num;	//交换数据,因数据格式(科目顺序)明确规定，故不再做科目名称的替换
-//					strcpy(temp_name,qtr->name);
-//					temp0 = qtr->subject[0].score;
-//					temp1 = qtr->subject[1].score;
-//					
-//					qtr->num = ptr->num;
-//					strcpy(qtr->name,ptr->name);
-//					qtr->subject[0].score = ptr->subject[0].score;
-//					qtr->subject[1].score = ptr->subject[1].score;
-//					
-//					ptr->num = temp_num;
-//					strcpy(ptr->name,temp_name);
-//					ptr->subject[0].score = temp0;
-//					ptr->subject[1].score = temp1;
-//				}
-//				qtr = qtr->next;
-//				ptr = ptr->next;
-//			}
-//		}
-//	}
-//	
-//	if( n == 2 )
-//	{
-//		for( i=0;i<len;i++)
-//		{
-//			ptr = head->next->next;
-//			qtr = head->next;
-//			for( j=0;j<len-i-1;j++)
-//			{
-//				if( qtr->subject[1].score < ptr->subject[1].score )
-//				{
-//					temp_num = qtr->num;
-//					strcpy(temp_name,qtr->name);
-//					temp0 = qtr->subject[0].score;
-//					temp1 = qtr->subject[1].score;
-//					
-//					qtr->num = ptr->num;
-//					strcpy(qtr->name,ptr->name);
-//					qtr->subject[0].score = ptr->subject[0].score;
-//					qtr->subject[1].score = ptr->subject[1].score;
-//					
-//					ptr->num = temp_num;
-//					strcpy(ptr->name,temp_name);
-//					ptr->subject[0].score = temp0;
-//					ptr->subject[1].score = temp1;
-//				}
-//				qtr = qtr->next;
-//				ptr = ptr->next;
-//			}
-//		}
-//	}
-//	//输出排序过后的链表
-//	ptr = head->next;
-//	while( ptr != NULL )
-//	{
-//		printf("%03d  %s  %s  %5.2f  %s  %5.2f\n",
-//			  ptr->num,ptr->name,
-//			  ptr->subject[0].name,ptr->subject[0].score,
-//			  ptr->subject[1].name,ptr->subject[1].score);
-//		ptr = ptr->next;
-//	}
-//}
-// 
- 
 //保存文件并退出，文件操作
 void SaveQuit(pstu x)    
 {
@@ -404,7 +291,7 @@ void SaveQuit(pstu x)
 	
 	while(ptr != NULL)						//遍历链表结点，按data约定格式输出数据
 	{
-		fprintf(fp,"%03d  %s  %s  %5.2f  %s  %5.2f\r",
+		fprintf(fp,"%03d  %s  %s  %5.2f  %s  %5.2f\r\n",
 			ptr->num,ptr->name,
 			ptr->subject[0].name,ptr->subject[0].score,
 			ptr->subject[1].name,ptr->subject[1].score);			
