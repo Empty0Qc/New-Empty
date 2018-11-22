@@ -5,13 +5,28 @@
 #include <string.h>
 
 //3.模拟实现strncmp
+int my_strncmp(const char* dst,const char* ptr,size_t n)
+{
+	assert(dst);
+	assert(ptr);
+	while(--n && (*dst == *ptr) && (*ptr != '\0') )
+	{
+		ptr++;
+		dst++;
+	}
+	return *dst - *dst;
 
+}
 int main()
 {
 	char* a1 = "abcdef";
-	char* a2 = "cde";
-	if(strncmp(a1,a2,3) == 1)
+	char* a2 = "abcdef";
+	if(my_strncmp(a1,a2,3) > 0)
 		printf("hehe");
+	else if(my_strncmp(a1,a2,3) < 0)
+		printf("haha");
+	else
+		printf("一样!");
 	return 0;
 }
 

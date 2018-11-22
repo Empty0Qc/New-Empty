@@ -1,9 +1,0 @@
-C:\Users\Administrator\Desktop\New Code\GitHub\New-Empty\Bar\Bar\bin\Debug\Bar.exe
-C:\Users\Administrator\Desktop\New Code\GitHub\New-Empty\Bar\Bar\bin\Debug\Bar.pdb
-C:\Users\Administrator\Desktop\New Code\GitHub\New-Empty\Bar\Bar\bin\Debug\Bar.xml
-C:\Users\Administrator\Desktop\New Code\GitHub\New-Empty\Bar\Bar\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\Administrator\Desktop\New Code\GitHub\New-Empty\Bar\Bar\obj\Debug\Bar.Resources.resources
-C:\Users\Administrator\Desktop\New Code\GitHub\New-Empty\Bar\Bar\obj\Debug\Bar.vbproj.GenerateResource.Cache
-C:\Users\Administrator\Desktop\New Code\GitHub\New-Empty\Bar\Bar\obj\Debug\Bar.exe
-C:\Users\Administrator\Desktop\New Code\GitHub\New-Empty\Bar\Bar\obj\Debug\Bar.xml
-C:\Users\Administrator\Desktop\New Code\GitHub\New-Empty\Bar\Bar\obj\Debug\Bar.pdb
