@@ -16,17 +16,17 @@ addressBook a_count;
 int menu()
 {
 	int choice = 0;
-	printf("-------通讯录--------\n");
-	printf("---------------------\n");
-	printf("1.ADD\n");
-	printf("2.DEL\n");
-	printf("3.MODIFY\n");	
-	printf("4.FIND\n");
-	printf("5.PARINT\n");
-	printf("6.CLEAR\n");
-	printf("7.NAMERANK\n");
-	printf("8.EXIT\n");
-	printf("---------------------\n");
+	printf("   ￣▽￣通讯录￣▽￣\n");
+	printf("(￣.￣)(￣.￣)(￣.￣)\n");
+	printf("\t1.ADD\n");
+	printf("\t2.DEL\n");
+	printf("\t3.MODIFY\n");	
+	printf("\t4.FIND\n");
+	printf("\t5.PARINT\n");
+	printf("\t6.CLEAR\n");
+	printf("\t7.NAMERANK\n");
+	printf("\t8.EXIT\n");
+	printf("(￣３￣)a (￣３￣)a (￣３￣)a \n");
 
 	
 	while(1)
@@ -80,7 +80,7 @@ void load_person()
 
 void save_person()
 {
-	int i;
+	int i = 0;
 	FILE *in = fopen("./通讯录.txt","w");
 
 	if (in == NULL)
@@ -88,7 +88,7 @@ void save_person()
 		printf("保存失败!\n");
 	}
 
-	for (i=0; i<a_count.capacity; i++)
+	for (i=0; i<a_count.size; i++)
 	{
 		fwrite(&a_count.person[i],sizeof(Person),1,in);
 	}
@@ -117,9 +117,9 @@ void add_person()
 {
 	expand_person();
 	printf("请输入姓名:>");
-	scanf("%s",&a_count.person->name);
+	scanf("%s",a_count.person[a_count.size].name);
 	printf("请输入电话:>");
-	scanf("%s",&a_count.person->tel);
+	scanf("%s",a_count.person[a_count.size].tel);
 	printf("添加成功!\n");
 	++a_count.size;
 	save_person();
@@ -128,6 +128,7 @@ void add_person()
 void del_person()
 {
 	char per[SIZE] = {0};
+	int flag2 = SIZE;
 	int i;
 
 	printf("删除用户！\n");
@@ -139,12 +140,20 @@ void del_person()
 		{
 			printf("%s", a_count.person[i].name);
 			a_count.person[i] = a_count.person[a_count.size];
-
+			flag2--;
 		}
 	}
-	printf("删除成功！\n");
-	a_count.size--;
-	save_person();
+	if (SIZE == flag2)
+	{
+		printf("没有该用户!\n");
+	}
+	else
+	{
+		printf("删除成功！\n");
+		a_count.size -= (SIZE - flag2);
+		save_person();
+	}
+	
 }
 
 void mod_person()
@@ -209,7 +218,7 @@ void rank_person()
 
 	for (i = 0; i < a_count.size; i++)
 	{
-		for (j = 0; j < a_count.size; j++)
+		for (j = 0; j < a_count.size-1; j++)
 		{
 			if (strcmp(a_count.person[j].name, a_count.person[j+1].name) > 0)
 			{
@@ -222,7 +231,7 @@ void rank_person()
 	printf("排序成功!\n");
 	save_person();
 }
-void clear_person()           //清除所有联系人
+void clear_person()           
 {
 	int i = 0;
 	char a[SIZE] = { 0 };
@@ -231,10 +240,12 @@ void clear_person()           //清除所有联系人
 	scanf("%s", a);
 	if (strcmp("y", a) == 0)
 	{
-		memset(a_count.person,NULL,sizeof(a_count.person));  //中间必须放成空的才会真正清除
+		memset(a_count.person,NULL,sizeof(a_count.person)); 
 		a_count.size = 0;
 		a_count.capacity = 10;
+		printf("清空成功!\n");
 	}
-	printf("清空成功!\n");
+	else
+		printf("Undelete!\n");
 	save_person();                                     
 }

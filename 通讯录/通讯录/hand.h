@@ -1,3 +1,6 @@
+#ifndef __HAND_H__
+#define __HAND_H__
+
 #define _CRT_SECURE_NO_WARNINGS 1
 #define SIZE 1000
 
@@ -17,3 +20,5 @@ void find_person();
 void print_person();
 void rank_person();
 void clear_person();
+
+#endif //__HAND_H__
