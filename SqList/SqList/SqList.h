@@ -17,7 +17,7 @@ typedef struct SList{
 }SList;
 
 //³õÊ¼»¯/Ïú»Ù
-void ListInit(SList *SqList);
+void ListInit(SList **SqList);
 void ListDestry(SList *SqList);
 // Add Delete FInd Modify 
 

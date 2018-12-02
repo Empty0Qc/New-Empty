@@ -5,6 +5,9 @@ void ListInit(SList *SqList){
 	assert(SqList);
 	SqList->List_head = NULL;
 }
+//申请新空间
+static Node* BuyListNode(DataType data){
+}
 
 //在头添加
 void ListPushFront(SList *SqList,DataType data){
@@ -32,13 +35,12 @@ void ListPopFront(SList *SqList){
 	free(old_list);
 }
 
-
 //打印
 void ListPrint(SList *SqList){
-	Node *cur= SqList;
+	Node *cur= SqList->List_head;
 	assert(SqList);
 	assert(SqList->List_head != NULL);
-	for(cur=SqList; cur != NULL;cur=cur->data){
+	for(; cur != NULL;cur=cur->next){
 		printf("%d ",cur->data);
 	}
 
