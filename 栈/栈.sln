@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "栈", "栈\栈.vcproj", "{44753C00-0A22-401D-B6AA-188ABBC1B89D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44753C00-0A22-401D-B6AA-188ABBC1B89D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{44753C00-0A22-401D-B6AA-188ABBC1B89D}.Debug|Win32.Build.0 = Debug|Win32
+		{44753C00-0A22-401D-B6AA-188ABBC1B89D}.Release|Win32.ActiveCfg = Release|Win32
+		{44753C00-0A22-401D-B6AA-188ABBC1B89D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
