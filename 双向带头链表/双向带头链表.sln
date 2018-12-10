@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "双向带头链表", "双向带头链表\双向带头链表.vcproj", "{3F31F17C-6F5B-4D48-88CB-2D4A2C875900}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F31F17C-6F5B-4D48-88CB-2D4A2C875900}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F31F17C-6F5B-4D48-88CB-2D4A2C875900}.Debug|Win32.Build.0 = Debug|Win32
+		{3F31F17C-6F5B-4D48-88CB-2D4A2C875900}.Release|Win32.ActiveCfg = Release|Win32
+		{3F31F17C-6F5B-4D48-88CB-2D4A2C875900}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
