@@ -169,6 +169,10 @@
 				RelativePath=".\Test.c"
 				>
 			</File>
+			<File
+				RelativePath=".\²âÊÔ.c"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Í·ÎÄ¼þ"
@@ -177,6 +181,10 @@
 			>
 			<File
 				RelativePath=".\SeqList.h"
+				>
+			</File>
+			<File
+				RelativePath=".\²âÊÔ.h"
 				>
 			</File>
 		</Filter>

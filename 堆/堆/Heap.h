@@ -30,8 +30,8 @@ void AdjustUp(int array[],int size,int child){
 }
 //向下调整
 void AdjustDown(int array[],int size,int root){
-	int left  = 2*root + 1;
-	int right = 2*root + 2;
+	int left  = 2*root + 1; //root左孩子的下标
+	int right = 2*root + 2;	//root右孩子的下标
 	int min,t;
 	if(left >= size){
 		//越界
@@ -58,7 +58,7 @@ void AdjustDown(int array[],int size,int root){
 
 //建堆
 void CreatHeap(int array[],int size){
-	for (i = (size-2)/2;i>=0;i--)
+	for (i = (size-2)/2;i>=0;i--) 
 	{
 		AdjustDown(array,size,i);
 	}
