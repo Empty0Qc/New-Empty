@@ -1,0 +1,301 @@
+572. 另一个树的子树
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+
+
+
+bool isSametree(struct TreeNode* p, struct TreeNode* q) {
+	if(p == NULL && q == NULL){
+		return true;
+	}
+
+	if(p == NULL || q == NULL){
+		return false;
+	}
+	return p->val == q->val
+		&& isSametree(p->left,q->left)
+		&& isSametree(p->right,q->right);
+}
+
+bool preorder(struct TreeNode *r,struct TreeNode *t){
+	if(r == NULL){
+		return false;
+	}
+	if(isSametree(r,t)){
+		return true;
+	}
+	if(preorder(r->left) == true){
+		return true;
+	}
+
+	return preorder(r->right);
+}
+
+bool isSubtree(struct TreeNode* s, struct TreeNode* t) {
+	return preorder(s,t);    
+}
+
+
+#if 0
+
+//静态顺序表的头插
+void SeqListPushFront(SeqList *sl,int val)
+{
+	assert(sl != NULL);
+	assert(sl->size < 100);
+	for(int i = sl->size;i>0;i--){
+		array[i-1] = array[i];
+	}
+	array[0] = val;
+	sl->size++;
+}
+
+
+#endif
+
+#if 0
+
+typedef struct Node{
+	int val;
+	struct Node *next;
+} Node;
+
+typedef struct List
+{
+	Node *head;
+}List;
+
+//尾删
+void ListPopBack(List *list){
+	assert(list);
+	assert(list->head == NULL);
+	if(list->head->next == NULL){
+		free(list->head);
+		list->head->next = NULL;
+		return NULL;
+	}
+	Node *fhead = list->head;
+	while(fhead->next->next != NULL){
+		fhead = fhead->next;
+	}
+	free(fhead->next)
+	fhead->next = NULL;
+}
+
+
+//逆置
+void *Reverse(Node *head){
+
+	assert(head);
+	assert(head->next != NULL)
+	Node *p1 = NULL;
+	Node *p2 = head;
+	Node *p3 = head->next;
+
+	while(p2 != NULL){
+		p2->next = p1;
+
+		p1 = p2;
+		p2 = p3;
+		if(p3 != NULL)
+			p3 = p3->next;
+	}
+}
+
+
+#endif
+
+#if 0
+typedef struct TreeNode{
+	int val;
+	struct TreeNode *left;
+	struct TreeNode *right;
+}TreeNode;
+
+
+
+void PreorderTraversal(TreeNode *root){
+	if(root == NULL){
+		return;
+	}
+	printf("%d ",root->val);
+	PreorderTraversal(root->left);
+	PreorderTraversal(root->right);
+
+}
+
+
+int GetHeight(TreeNode *root){
+	if(root == NULL){
+		return 0
+	}
+	int H_left = GetHeight(root->left);
+	int H_right = GetHeight(root_>right);
+
+	return left > right ? left+1 : right+1;
+}
+
+TreeNode *find(TreeNode *root,int value){
+	if(root == NULL){
+		return NULL;
+	}
+	if(root->val == value){
+		return root;
+	}
+	if(NULL != (TreeNode *lf = find(root->left,value))){
+		return lf;
+	}
+	else
+	{
+		if(NULL != (TreeNode *ri = find(root->right,value))){
+			return ri;
+		}
+	
+	}
+	return NULL;
+}
+
+#endif
+
+#if 0
+
+#include<queue>
+
+void Levelorder(TreeNode *root){
+	std::queue<TreeNode *> q;
+
+	q.push(root);
+	while(!q.empty()){
+		TreeNode *front = q.front();
+		q.pop();
+
+		printf("%d ",front->value);
+		if(front->left){
+			q.push(front->left);
+		}
+		if(front->right){
+			q.push(front->right);
+		}
+	}
+}
+
+
+bool Check(TreeNode *root){
+	if (root == NULL){
+		return true;
+	}
+	std::queue<TreeNode *> q;
+	q.push(root);
+	while(true){
+		TreeNode *front = q.front();
+		q.pop();
+		if(front == NULL){
+			break;
+		}
+		q.push(front->left);
+		q.push(front->right);
+	}
+	while(!q.empty())
+		......
+}
+
+#endif
+
+//#if 0
+
+void AdjustDown(int array[],int size,int root){
+	int left  = root * 2 + 1;
+	int right = root * 2 + 2;
+	int min,t;
+	//是否有孩子
+	if(left >= szie){
+		//么有左孩子，也就一定没有右孩子(完全二叉树)
+		return;
+	}
+	if(right < size && array[left] > array[rightt]){
+		min = right;
+	}
+	else{
+		min = left;
+	}
+	if(array[root] <= array[min]){
+		return;
+	}
+
+	t = array[root];
+	array[root] = array[min];
+	array[min] = t;0
+
+	AdjustDown(array,size,min);
+}
+
+/*
+ 
+*/
+
+
+#endif
+
+
+//#if 0
+
+
+void SelectSort(int array[],int size)
+{
+	
+	for(int i = 0; i<size; i++)
+	{
+		int max = 0;
+		for(int j = 0; j < size - 1; j++)
+		{
+			if(array[j] >= array[max])
+			{
+				max = j;
+			}
+		}
+		swap(array+max,array+size-i-1)
+
+	}
+}
+#endif
+
+/*
+火箭班：
+
+	沈晓东
+	唐文龙
+	黄一伟
+	马成虎
+	张瑞恒
+	张航
+	万强
+	马玉 
+	杨柳  
+	任博
+	张祥伟	
+  	王鸽
+49班：
+
+	王珩(报了)
+
+
+
+
+	16  14
+	16  18
+
+
+	16*10+16*20  /  32  =  15   数字挖掘
+	14*10+18*20  /  32  =  16   图像处理
+
+
+
+	*/
+
