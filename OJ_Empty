@@ -277,10 +277,8 @@ void SelectSort(int array[],int size)
 	张航
 	万强
 	马玉 
-	杨柳  
 	任博
 	张祥伟	
-  	王鸽
 49班：
 
 	王珩(报了)
@@ -299,3 +297,522 @@ void SelectSort(int array[],int size)
 
 	*/
 
+#if 0
+
+//归并
+
+void _MergrSort(int array[],int left,int right){
+	//终止条件
+	if(right <= lrft + 1){
+	}
+
+	int mid = left +(right - left)/2;
+	//[left,mid)	[mid,right]
+
+	_MergrSort(array,left,mid);
+	_MergrSort(array,mid,right);
+	//左右区间都有序
+	Merge(array,left,mid,right);
+}
+void MergrSort(int array[],int size){
+	_MergrSort(array,0,size);
+}
+
+#endif
+
+
+#if 0
+
+#include<stdio.h>
+#include<malloc.h>
+#include<string.h>
+#include<stdlib.h>
+
+
+typedef struct Node {
+	char val;
+	struct Node *left;
+	struct Node *right;
+}Node;
+
+typedef struct {
+	Node *root; //创建好的树的根节点
+	int used;	//创建树过程中用掉的val个数
+}Result;
+
+Result CreateTree(char preorder[], int size) {
+
+	if (size == 0)
+	{
+		Result result;
+		result.root = NULL;
+		result.used = 0;
+
+		return result;
+	}
+	char rootValue = preorder[0];
+	if (rootValue == '#')
+	{
+		Result result;
+		result.root = NULL;
+		result.used = 1;
+
+		return result;
+	}
+
+	//创建根节点
+	Node *root = (Node *)malloc(sizeof(Node));
+	root->val = rootValue;
+
+	//创建左子树
+	Result left_result = CreateTree(preorder + 1, size - 1);
+	//创建右子树
+	Result right_result = CreateTree(preorder + 1 + left_result.used, size - 1 - left_result.used);
+	root->left = left_result.root;
+	root->right = right_result.root;
+	Result result;
+	result.root = root;
+	result.used = 1 + left_result.used + right_result.used;
+
+	return result;
+}
+void PreordrerTraversal(Node *root){
+	if (root == NULL){
+		return;
+	}
+	printf("%c", root->val);
+	PreordrerTraversal(root->left);
+	PreordrerTraversal(root->right);
+}
+
+
+void TestCreateTree() {
+	char *preorder = "AB#DE###C";
+	int size = strlen(preorder);
+	Result result = CreateTree("AB#DE###C", size);
+
+	PreordrerTraversal(result.root);
+}
+
+#endif
+
+
+#if 0
+
+Date* pd = (Date*)malloc(sizeof(Date));  //申请空间
+free(pd);
+Date* pd2 = new Date; //申请空间 + 构造函数初始化
+Date* pd3 = new Date[20]; //new 类型 [N] : 申请空间 + N次构造函数初始化
+delete pd2; //析构函数 + 释放空间
+
+delete[] pd3; // N次析构函数 + 释放空间
+
+
+
+
+int* _pa = (int*) operator new(4);   // malloc + 异常
+
+
+#endif
+
+
+#if 0 
+
+#include<iostream>
+using namespace std;
+struct ListNode
+{
+	ListNode(int data = 0)
+	:_data(data)
+	, _next(nullptr)
+	, _prev(nullptr){}
+	ListNode* _next;
+	ListNode* _prev;
+	int _data;
+};
+
+class ListNode
+{
+public:
+	List()
+	:_head(new ListNode)
+	{
+		_head->_next = _head;
+		_head->_prev = _head;
+	}
+private:
+	ListNode* _head;
+};
+
+int main()
+{
+	List l;
+	return 0;
+}
+#endif
+
+
+
+#if 0
+int RightMove(int n,int x)
+{
+	unsigned char tmp;
+	for(int i = 1; i < x % 8; i++)
+	{
+		tmp = n & "\x01";
+		n >>= 1;
+		n |= tmp << 7;
+	}
+	return n;
+}
+void switchBin(unsigned int n, char res[])
+{
+	for(int i = 7;i >= 0; i++)
+	{
+		res[i] = "01"[n%2];
+		n /= 2;
+	}
+}
+int main()
+{
+	char src[20] = {0};
+	char tmp[9] = {0};
+	char res[200] = {0};
+	int i,n,len;
+	scanf("%19s",src);
+	len = strlen(src);
+	for(i=1;i<=len;i++)
+	{
+		n = RightMove(src[i] - '0',i);
+		switchBin(n,tmp);
+		strcat(res,tmp);
+	}
+	puts(res);
+	system("pause");
+}
+
+#endif
+
+#if 0
+
+#include <stdio.h>
+#include <string.h>
+#include <Windows.h>
+
+int rightMove(int n, int x)
+{
+	int i;
+	unsigned char tmp;
+	for(i = 0; i < x % 8; i++)
+	{
+		tmp = n & '\x01';
+		n >>= 1;
+		n |= tmp << 7;
+	}
+	return n;
+}
+
+void switchBin(unsigned int n, char res[])
+{
+	int i;
+	for(i = 7; i >= 0; i--)
+	{
+		res[i] = "01"[n % 2];
+		n /= 2;
+	}
+}
+
+int main()
+{
+	char src[20] = {0};
+	char tmp[9] = {0};
+	char res[200] = {0};
+	int i;
+	int n;
+	int len;
+	
+	scanf("%19s", src);
+	len = strlen(src);
+	
+	for(i = 1; i <= len; i++)
+	{
+		n = rightMove(src[i - 1] - '0', i);
+		switchBin(n, tmp);
+		strcat(res, tmp);
+	}
+	
+	puts(res);
+	return 0;
+}
+
+#endif
+
+
+if 1
+//	问题
+1. 777
+2. makefile
+
+
+#endif
+
+48 57
+00110000
+
+65
+
+01000001
+
+97
+
+01100001
+
+
+00100000
+
+
+namespace bit
+{
+class String
+{
+public:
+	typedef char* Iterator;
+public:
+ 	String(const char* str = "")
+{
+// 构造string类对象时，如果传递nullptr指针，认为程序非法，此处断言下
+	if (nullptr == str)
+ {
+ 	assert(false);
+ 	return;
+ }
+ 	_size = strlen(str);
+ 	_capacity = _size;
+ 	_str = new char[_capacity+1];
+ 	strcpy(_str, str);
+ }
+ 	String(const String& s)
+ 		: _str(new char[s._capacity + 1])
+ 		, _size(s._size)
+ 		, _capacity(s._capacity)
+ {
+ 	strcpy(_str, s._str);
+ }
+ String& operator=(const String& s)
+ {
+ 	if (this != &s)
+ {
+ 	 char* pStr = new char[s._capacity + 1];
+ 	strcpy(pStr, s._str);
+ 	delete[] _str;
+ 	_str = pStr;
+ 	_size = s._size;
+ 	_capacity = s._capacity;
+ }
+ 	return *this;
+ }
+ 	~String()
+ {
+ 	if (_str)
+ {
+ 	delete[] _str;
+ 	_str = nullptr;
+ }
+ }
+ /////////////////////////////////////////////////////////////////
+ // Iterator
+ Iterator Begin()
+ {
+ return _str;
+ }
+ Iterator End()
+ {
+ return _str + _size;
+ }
+ /////////////////////////////////////////////////////////////////
+ // modify
+ void PushBack(char c)
+ {
+ if (_size == _capacity)
+ Reserve(_capacity*2);
+
+ _str[_size++] = c;
+ _str[_size] = '\0';
+ }
+ void Append(size_t n, char c)
+ {
+ for (size_t i = 0; i < n; ++i)
+ PushBack(c);
+ }
+ String& operator+=(char c)
+ {
+ PushBack(c);
+ return *this;
+ }
+
+ // 作业实现
+ void Append(const char* str);
+ String& operator+=(const char* str);
+ void Clear()
+ {
+ _size = 0;
+ _str[_size] = '\0';
+ }
+ void Swap(String& s)
+ {
+ swap(_str, s._str);
+ swap(_size, s._size);
+ swap(_capacity, s._capacity);
+ }
+ const char* C_Str()const
+ {
+ return _str;
+ }
+ /////////////////////////////////////////////////////////////////
+ // capacity
+ size_t Size()const
+ {
+ return _size;
+ }
+ size_t Capacity()const
+ {
+ return _capacity;
+ }
+ bool Empty()const
+ {
+ return 0 == _size;
+ }
+ void Resize(size_t newSize, char c = char())
+ {
+ if (newSize > _size)
+ {
+ // 如果newSize大于底层空间大小，则需要重新开辟空间
+ if (newSize > _capacity)
+ {
+ Reserve(newSize);
+ }
+ memset(_str + _size, c, newSize - _size);
+ }
+ _size = newSize;
+ _str[newSize] = '\0';
+ }
+ void Reserve(size_t newCapacity)
+ {
+ // 如果新容量大于旧容量，则开辟空间
+ if (newCapacity > _capacity)
+ {
+ char* str = new char[newCapacity + 1];
+ strcpy(str, _str);
+ // 释放原来旧空间,然后使用新空间
+ delete[] _str;
+ _str = str;
+ _capacity = newCapacity;
+ }
+ }
+ ////////////////////////////////////////////////////////////////////
+ // access
+ char& operator[](size_t index)
+ {
+ assert(index < _size);
+ return _str[index];
+ }
+ const char& operator[](size_t index)const
+ {
+ assert(index < _size);
+ return _str[index];
+ }
+ ////////////////////////////////////////////////////////////////////
+ // 作业
+ bool operator<(const String& s);
+ bool operator<=(const String& s);
+ bool operator>(const String& s);
+ bool operator>=(const String& s);
+ bool operator==(const String& s);
+ bool operator!=(const String& s);
+ // 返回c在string中第一次出现的位置
+ size_t Find (char c, size_t pos = 0) const;
+ // 返回子串s在string中第一次出现的位置
+ size_t Find (const char* s, size_t pos = 0) const;
+ // 截取string从pos位置开始的n个字符
+ String SubStr(size_t pos, size_t n);
+ // 在pos位置上插入字符c/字符串str，并返回该字符的位置
+ String& Insert(size_t pos, char c);
+ String& Insert(size_t pos, const char* str);
+ // 删除pos位置上的元素，并返回该元素的下一个位置
+ String& Erase(size_t pos, size_t len);
+ private:
+ friend ostream& operator<<(ostream& _cout, const bit::String& s);
+ private:
+ char* _str;
+ size_t _capacity;
+ size_t _size;
+ };
+}
+ostream& bit::operator<<(ostream& _cout, const bit::String& s)
+{
+ cout << s._str;
+ return _cout;
+}
+///////////////////////////////////////////////////////////////////////////////////////////
+///////对自定义的string类进行测试
+void TestBitString1()
+{
+ bit::String s1;
+ bit::String s2("hello bit");
+ bit::String s3(s2);
+ s1 = s3;
+ cout << s1 << endl;
+ cout << s2 << endl;
+ cout << s3 << endl;
+}
+void TestBitString2()
+{
+ bit::String s1("hello");
+ s1.PushBack(' ');
+ s1.PushBack('b');
+ s1.Append(1, 'i');
+ s1 += 't';
+ cout << s1 << endl;
+ cout << s1.Size() << endl;
+ 
+4. 总结
+4.1 本节总结
+ cout << s1.Capacity() << endl;
+ // 利用迭代器打印string中的元素
+ auto it = s1.Begin();
+ while (it != s1.End())
+ {
+ cout << *it++;
+ }
+ cout << endl;
+ bit::String s2("hello world!!!");
+ s1.Swap(s2);
+ cout << s1 << endl;
+ cout << s2 << endl;
+}
+void TestBitString3()
+{
+ bit::String s("hello");
+ cout << s << endl;
+ cout << s.Size() << endl;
+ cout << s.Capacity() << endl;
+ s.ReSize(10, 'a');
+ cout << s << endl;
+ cout << s.Size() << endl;
+ cout << s.Capacity() << endl;
+ s.ReSize(20);
+ cout << s << endl;
+ cout << s.Size() << endl;
+ cout << s.Capacity() << endl;
+ s.ReSize(5);
+ cout << s << endl;
+ cout << s.Size() << endl;
+ cout << s.Capacity() << endl;
+ s.Reserve(50);
+ cout << s << endl;
+ cout << s.Size() << endl;
+ cout << s.Capacity() << endl;
+}
+
+0001
+0010  0011  0000

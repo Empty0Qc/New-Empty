@@ -428,7 +428,7 @@ int main()
 
 #endif
 
-#if 1 
+#if 0
 template<class T>
 class Vector
 {
@@ -438,6 +438,7 @@ public:
 		, _size(0)
 		, _capacity(capacity)
 	{}
+	Vector(const Vector<T>& v);
 	void PushBack(const T& a)
 	{
 		if (_size == _capacity)
@@ -493,6 +494,321 @@ int main()
 		}
 		cout << v1.operator[](i) << endl;
 	}
+		return 0;
+}
+#endif
+
+
+#if 0
+class Solution{
+public:
+	string addStrings(string num1, string num2){
+		int index1 = num1.size() - 1;
+		int index2 = num2.size() - 1;
+		int next = 0;
+		string str;
+		while (index1 >= 0 || index2 >= 0)
+		{
+			int value1 = 0, value2 = 0;
+			while (index1 >= 0)
+			{
+				value1 = num1[index1] - '0';
+				--index1;
+			}
+			while (index2 >= 0)
+			{
+				value2 = num2[index2] - '0';
+				--index2;
+			}
+			int addret = value1 + value2 + next;
+			if (addret > 9)
+			{
+				addret -= 10;
+				next = 1;
+			}
+			else
+			{
+				next = 0;
+			}
+			str += ('0' + addret);
+		}
+		if (next == 1)
+			str += '1';
+		reverse(str.begin(),str.end());
+		return str;
+	}
+};
+
+#endif
+
+
+
+
+#if 0
+
+class Solution {
+public:
+	bool IsNumberOrLetter(char c)
+	{
+		if (c >= '0' && c <= '9' ||
+			c >= 'a' && c <= 'z' ||
+			c >= 'A' && c <= 'Z')
+			return true;
+		return false;
+	}
+	bool isPalindrome(string s) {
+		if (s.empty())
+			return true;
+		int begin = 0;
+		int end = s.size() - 1;
+		for (; begin < end; begin++, end--)
+		{
+			while (!IsNumberOrLetter(s[begin]) && begin < end)
+				++begin;
+			while (!IsNumberOrLetter(s[end]) && begin < end)
+				--end;
+			if ((s[begin] | (1 << 5)) != (s[end] | (1 << 5)))
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+};
+
+int main()
+{
+	Solution s;
+	string str = " ";
+	cout << s.isPalindrome(str) << endl;
 	return 0;
 }
 #endif
+
+#if 0
+
+//11位学号 二进制加密
+#include <stdio.h>
+#include <string.h>
+#include <Windows.h>
+int RightMove(int n, int x)
+{
+	unsigned char tmp;
+	for (int i = 0; i < x % 8; i++)
+	{
+		tmp = n & '\x01';
+		n >>= 1;
+		n |= tmp << 7;
+	}
+	return n;
+}
+void switchBin(unsigned int n, char res[])
+{
+	for (int i = 7; i >= 0; i--)
+	{
+		res[i] = "01"[n % 2];
+		n /= 2;
+	}
+}
+int main()
+{
+	char src[20] = { 0 };
+	char tmp[9] = { 0 };
+	char res[200] = { 0 };
+	int i, n, len;
+	scanf("%19s", src);
+	len = strlen(src);
+	for (i = 1; i <= len; i++)
+	{
+		n = RightMove(src[i - 1] - '0', i);
+		switchBin(n, tmp);
+		strcat(res, tmp);
+		strcat(res, " ");
+	}
+	puts(res);
+	system("pause");
+	return 0;
+}
+
+#endif
+
+
+#if 0
+
+
+#include<iostream>
+using namespace std;
+
+int divisor(int a, int b)
+{
+	return b == 0 ? a : divisor(b, a % b);
+}
+int main()
+{
+	int a, n;
+	scanf("%d %d",&a,&n);
+	int Boss[100000] = { 0 };
+	for (int j = 0; j < n; j++)
+	{
+		cin >> Boss[j];
+	}
+	int count = n;
+	int i = -1;
+	while (count--)
+	{
+		++i;
+		if (Boss[i] < 0)
+			break;
+		else if (Boss[i] <= a)
+		{
+			a += Boss[i];
+			continue;
+		}
+		else if (Boss[i] > a)
+		{
+			a += divisor(Boss[i], a);
+			continue;
+		}
+		
+	}
+	cout << a << endl;
+	system("pasue");
+	return 0;
+}
+
+
+#endif
+
+#if 0
+
+#include<iostream>
+using namespace std;
+
+int IsEmpty(char* s)
+{
+	int flag[26] = { 0 };
+	for (int i = 0; s[i] != '\0'; i++)
+	{
+		flag[s[i] - 'a']++;
+	}
+	for (int i = 0; s[i] != '\0'; i++)
+	{
+		if (flag[s[i] - 'a'] == 1)
+			return i;
+	}
+	return -1;
+}
+
+int main()
+{
+	char s[10000];
+	scanf("%s", &s);
+	if (-1 == IsEmpty(s))
+		cout << -1;
+	else
+		cout << s[IsEmpty(s)];
+
+	return 0;
+}
+
+#endif
+
+
+#if 0
+//一个简单的String类写 一个构造，析构，拷贝构造，赋值运算五部分  拷贝构造和赋值用现代方式 即swap小弟形式
+
+class String
+{
+public:
+	String()
+		:_str(new char[1])
+	{
+		_str[0] = '\0';
+	}
+	String(const String& s)
+		:_str(new char[strlen(s._str) + 1])
+	{
+		strcpy(_str, s._str);
+	}
+
+	// 拷贝构造现在写法
+	String(const String& s)
+	{
+		String tmp(s._str);
+		swap(_str,tmp._str);
+	}
+	//赋值运算符重载
+	//1. 释放原有空间
+	//2. 开辟新空间
+	//3. 拷贝内容
+	String& operator= (const String& s)
+	{
+		if (this != &s)
+		{
+			delete[] _str;
+			_str = new char[strlen(s._str) + 1];
+			strcpy(_str, s._str);
+		}
+		return *this;
+	}
+	//赋值运算符重载
+	//1. 传值，拷贝构造一个局部临时对象完成开空间，拷贝内容
+	//2. 与临时对象交换指针指向，完成资源互换，间接完成内容拷贝
+	//3. 临时对象声明周期结束，释放原有空间.
+	String& operator=(String s)
+	{
+		swap(_str, s._str);
+		return *this;
+	}
+	~String()
+	{
+		if (_str)
+		{
+			delete[] _str;
+			_str = nullptr;
+		}
+	}
+	friend ostream operator<<(ostream& _cout,String& s);
+private:
+	char* _str;
+};
+int main()
+{
+	String s; // "sasd"是存在代码段的
+}
+#endif
+
+
+#if 0
+
+class String
+{
+public:
+	typedef char* Iterator;
+public:
+	String()
+	{} 
+
+	void PopBack()
+	{
+		if (_size > 0)
+		{
+
+		}
+	}
+private:
+	char* _str;
+	size_t _size;
+	size_t _capacity;
+
+};
+
+
+#endif
+
+#if 0
+
+
+
+#endif
+

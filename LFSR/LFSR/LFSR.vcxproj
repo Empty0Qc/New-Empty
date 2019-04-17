@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{885A2E8A-B120-4DF0-AC78-230D6AAE5630}</ProjectGuid>
-    <RootNamespace>CPP02</RootNamespace>
+    <ProjectGuid>{DB84FA21-E949-41D5-8FA6-EBAF9450CC32}</ProjectGuid>
+    <RootNamespace>LFSR</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -64,10 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="4.6.cpp" />
-    <ClCompile Include="OJ.cpp" />
-    <ClCompile Include="test.cpp" />
-    <ClCompile Include="test_1.cpp" />
+    <ClCompile Include="lfsr.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
