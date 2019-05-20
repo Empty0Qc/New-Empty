@@ -65,6 +65,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Byte.cpp" />
     <ClCompile Include="c.cpp" />
     <ClCompile Include="nok.cpp" />
   </ItemGroup>
