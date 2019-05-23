@@ -3,16 +3,36 @@
 #include <vector>
 #include <string>
 #include <list>
+#include <algorithm>
 using namespace std;
 
+
 #if 1
+
+
+
+int main()
+{
+	int n, x, Max = -99999, tmp = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> x;
+		tmp = max(tmp + x, x);
+		Max = max(tmp, Max);
+	}
+	cout << Max;
+	return 0;
+}
+#endif
+#if 0
 
 int main()
 {
 	string A,B;
 	int count = 0;
 	cin >> A >> B;
-	for (int i = 0; i < A.length();i++)
+	for (int i = 0; i <= A.length();i++)
 	{
 		string a = A;
 		a.insert(i, B);
