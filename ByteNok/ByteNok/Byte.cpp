@@ -1,49 +1,54 @@
 #include <iostream>
-#include <assert.h>
+#include <string>
 using namespace std;
-
 
 #if 1
 
-char* _reverse_all(char* start, char* end)
-{
-	assert(start);
-	assert(end);
-	char* p = start;
-	char tmp;
-	while (start < end)
-	{
-		tmp = *start;
-		*start = *end;
-		*end = tmp;
-		start++;
-		end--;
-	}
-	return p;
-}
-
-char* _reverse(char *str)
-{
-	assert(str);
-	char *pstr = str;
-	char *start = str;
-	char *end = str;
-	while (*end != '\0')
-	{
-		while (*end != ' ' && *end != '\0')end++;
-		end--;
-		_reverse_all(start, end);
-		start = end + 2;
-		end = start;
-	}
-	return pstr;
-}
 int main()
 {
-	char s[10244] = {0};
-	gets(s);
-	_reverse_all(s, s + strlen(s) - 1);
-	printf("%s\n",_reverse(s));
+	string s = "",s1;
+	bool x = true;
+	while (cin >> s1 || x)
+	{
+		s = s + s1;
+		if (cin >> s)
+		{
+			x = true;
+			s = s + s1;
+		}
+	}
+	return 0;
+}
+
+#endif
+
+#if 0
+
+int main()
+{
+	string s;
+	cin >> s;
+	int len = s.size();
+	int i = 0,j,count,max_count = 0;
+	char arr[1024] = { 0 };
+	char tmp[1024] = {0};
+	while (len > i && s[i])
+	{
+		count = j = 0;
+		while (len > i && s[i] <= '9' && s[i] >= '0')
+		{
+			count++;
+			tmp[j++] = s[i];
+			i++;
+		}
+		if (count > max_count)
+		{
+			memcpy(arr, tmp, count);
+			max_count = count;
+		}	
+		i++;
+	}
+	cout << arr;
 	return 0;
 }
 #endif
