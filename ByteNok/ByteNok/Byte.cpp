@@ -1,8 +1,57 @@
 #include <iostream>
+#include <math.h>
+#include <vector>
 #include <string>
+#include <list>
 using namespace std;
 
 #if 1
+
+int main()
+{
+	string A,B;
+	int count = 0;
+	cin >> A >> B;
+	for (int i = 0; i < A.length();i++)
+	{
+		string a = A;
+		a.insert(i, B);
+		string b = a;
+		reverse(a.begin(), a.end());
+		a == b ? count++ : count;
+	}
+	cout << count;
+	return 0;
+}
+
+#endif
+
+#if 0
+
+int main()
+{
+	int M,N;
+	cin >> M >> N;
+	int m = M,n = N,i = 0;
+	char arr[16] = {'0','1','2','3','4','5','6','7',
+		'8','9','A','B','C','D','E','F'};
+	while((int)pow(n,i) < m) i++;
+	while(i > 0)
+	{
+		int tmp = 0;
+		while(pow(n,i - 1) <= m)
+		{
+			tmp++;
+			m -= (int)pow(n,i - 1);
+		}
+		cout << arr[tmp];   
+		i--;
+	}
+	return 0;
+}
+
+#endif
+#if 0
 
 int main()
 {
