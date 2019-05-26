@@ -9,6 +9,110 @@ using namespace std;
 
 #if 1
 
+int StrToInt(string str) {
+	string tmp = "";
+	int len = str.length();
+	for (int i = 0; i < len;i++)
+	{
+		if(str[i] < '0' || str[i] > '9')
+		{
+			if(str[i] == '+')
+				;
+			else if(str[i] == '-')
+				tmp = '-' + tmp;
+			else
+			{
+				cout << 0 << endl;
+				return 0;
+			}
+		}
+		else
+		{
+			tmp = tmp + str[i];
+		}
+	}
+	cout << tmp << endl;
+	return 1;
+}
+
+int main()
+{
+	string s;
+	s = "-2135la15616";
+	StrToInt(s);
+	return 0;
+}
+
+#endif
+
+#if 0
+
+
+int main()
+{
+	int c, r;
+	cin >> c >> r;
+	vector<vector<int>> *v = new vector<vector<int>>;
+	for (int i = 0; i < c; i++)
+	{
+		for (int j = 0; j < r; j++)
+		{
+			cin >> v[i][j].push_back;
+		}
+	}
+
+}
+#endif
+
+#if 0
+
+
+int main()
+{
+	string s,out = "";
+	cin >> s;
+	int len = s.size();
+	int sum = 0,arr[1024];
+	for (int i = 0; i < len; i++)
+	{
+		if (s[i] >= '0' && s[i] <= '9')
+		{
+			arr[sum++] = s[i] - '0';
+		}
+		if (s[i] == '%' || s[i] == '#')
+				s[i] = ' ';
+	}
+	return 0;
+}
+
+#endif
+
+#if 0
+
+int main()
+{
+	int n,Max = 0;
+	cin >> n;
+	int *arr = new int[n];
+	for (int k = 0; k < n; k++)
+	{
+		cin >> arr[k];
+	}
+	for (int i = 0; i < n - 1; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			Max = max(arr[j] + arr[i] - j + i,Max);
+		}
+	}
+	cout << Max << endl;
+	return 0;
+}
+
+#endif
+
+#if 0
+
 
 
 int main()
