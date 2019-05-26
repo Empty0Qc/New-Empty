@@ -6,40 +6,89 @@
 #include <algorithm>
 using namespace std;
 
-
 #if 1
 
-int StrToInt(string str) {
-	string tmp = "";
-	int len = str.length();
-	for (int i = 0; i < len;i++)
+#include <iostream>
+using namespace std;
+
+int cou = 0,su = 0;
+int arrx[9];
+int arry[9];
+bool check(int x,int y)
+{
+	for(int i = 0;i < 9; i++)
 	{
-		if(str[i] < '0' || str[i] > '9')
+		if(arrx[i] == x && arry[i] == y)
+			return true;
+	}
+	return false;
+}
+void _sum(int x,int y)
+{
+	if(x == 0 && y == 0)
+	{
+		cou++;
+		return;
+	}
+	else if(x < 0 || y < 0)
+		return;
+	else if(check(x,y))
+		return;
+	_sum(x,y-1);
+	_sum(x-1,y);
+}
+int main()
+{
+	int dx,dy,hx,hy;
+	cin >> dx >> dy >> hx >> hy;
+	for (int i = -2; i < 3; i++)
+	{
+		for (int j = -2; j < 3; j++)
 		{
-			if(str[i] == '+')
-				;
-			else if(str[i] == '-')
-				tmp = '-' + tmp;
-			else
+			if (i - j == 1 || i - j == -1)
 			{
-				cout << 0 << endl;
-				return 0;
+				arrx[su] = hx + i;
+				arry[su] = hy + j;
+				su++;
 			}
 		}
-		else
-		{
-			tmp = tmp + str[i];
-		}
 	}
-	cout << tmp << endl;
-	return 1;
+	arrx[su] = hx;
+	arry[su] = hy;
+	su++;
+	_sum(dx, dy);
+	return 0;
 }
+
+#endif
+#if 0
+
+	int StrToInt(string str) {
+		int tmp = 0,f = 1,len = str.length();
+		for (int i = 0; i < len; i++)
+		{
+			if (str[i] < '0' || str[i] > '9')
+			{
+				
+				if (str[i] == '-')
+					f = -1;
+				else (str[i] != '+')
+					return 0;			
+			}
+			else
+			{
+				tmp = tmp * 10 + (str[i] - '0');
+			}
+		}
+		return tmp * f;
+	}
+
 
 int main()
 {
 	string s;
 	s = "-2135la15616";
-	StrToInt(s);
+	cout << StrToInt(s);
 	return 0;
 }
 
@@ -48,19 +97,21 @@ int main()
 #if 0
 
 
+#include <iostream>
+using namespace std;
+
 int main()
 {
-	int c, r;
-	cin >> c >> r;
-	vector<vector<int>> *v = new vector<vector<int>>;
-	for (int i = 0; i < c; i++)
+	int x,y,n;
+	while(cin >> x >> y)
 	{
-		for (int j = 0; j < r; j++)
-		{
-			cin >> v[i][j].push_back;
-		}
+		n = (x/4) * (y/4) * 8;
+		n += (x/4)*(y%4)*2 + (x%4)*(y/4)*2;
+		n += (x%4>1?2:x%4) * (y%4>1?2:y%4);
+		n += (x%4 == y%4 && x%4 == 3)?1:0;
+		cout << n << endl;
 	}
-
+	return 0;
 }
 #endif
 
