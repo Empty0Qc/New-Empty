@@ -266,36 +266,7 @@ void SelectSort(int array[],int size)
 }
 #endif
 
-/*
-火箭班：
 
-	沈晓东
-	唐文龙
-	黄一伟
-	马成虎
-	张瑞恒
-	张航
-	万强
-	马玉 
-	任博
-	张祥伟	
-49班：
-
-	王珩(报了)
-
-
-
-
-	16  14
-	16  18
-
-
-	16*10+16*20  /  32  =  15   数字挖掘
-	14*10+18*20  /  32  =  16   图像处理
-
-
-
-	*/
 
 #if 0
 
@@ -814,5 +785,31 @@ void TestBitString3()
  cout << s.Capacity() << endl;
 }
 
-0001
-0010  0011  0000
+
+
+
+栈的压入和弹出序列
+
+https://www.nowcoder.com/practice/d77d11405cc7470d82554cb392585106?tpId=13&tqId=11174&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking
+
+class Solution {
+public:
+    bool IsPopOrder(vector<int> pushV,vector<int> popV) {
+        stack<int> st;
+        size_t pushIndex = 0,popIndex = 0;
+        while(pushIndex < pushV.size())
+        {
+            st.push(pushV[pushIndex++]);
+            while(!st.empty() && st.top() == popV[popIndex])
+            {
+                st.pop();
+                popIndex++;     
+            }
+        }
+        return st.empty();
+    }
+};
+
+
+
+0054.17
