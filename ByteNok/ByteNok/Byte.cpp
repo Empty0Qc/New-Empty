@@ -6,7 +6,57 @@
 #include <algorithm>
 using namespace std;
 
+
 #if 1
+
+int main()
+{
+	int mid, avg;
+	int t = 0, tmp = 0, must[512] = {0}, sum = 0;
+	int a[1024] = { 0 };
+	int arr[] = { 13, 15, 16, 16, 19, 20, 20, 21, 22, 22, 25, 25, 25, 25,
+				  30, 33, 33, 35, 35, 35, 35, 36, 40, 45, 46, 52, 70 };
+	int siz = (sizeof(arr) / sizeof(arr[0]));
+	if (siz % 2 == 0)
+		mid = (arr[siz / 2] + arr[siz / 2 - 1]) / 2;
+	else
+		mid = arr[siz / 2];
+	for (int i = 0; i < siz; i++)
+	{
+		sum += arr[i];
+		a[arr[i]]++;
+	}
+	avg = sum / siz;
+	for (int i = 0; i < siz; i++)
+	{
+		if (a[arr[i]] > tmp)
+		{
+			tmp = a[arr[i]];
+			must[t] = arr[i];
+		}
+	}
+	t++;
+	for (int i = 0; i < siz; i++)
+	{
+		if (a[arr[i]] == tmp && arr[i] != must[t - 1])
+			must[t++] = arr[i];
+	}
+	cout << "要计算的数组为: \n";
+	for (int i = 0; i < siz; i++)
+		cout << arr[i] << " ";
+	cout << "\n";
+	cout << "该组数据的平均数为: " << avg << endl;
+	cout << "该组数据的中位数为: " << mid << endl;
+	cout << "该组数据的众数为:   " ;
+	for (int i = 0; i < t; i++){ cout << must[i] << " "; }
+	cout << "\n";
+	return 0;
+}
+
+#endif
+
+#if 0
+
 
 #define uul long long int
 
@@ -14,7 +64,7 @@ int cou = 0,su = 0;
 uul f[30][30];
 bool s[30][30];
 const int fx[] = { 0, -2, -1, 1, 2, 2, 1, -1, -2 };
-const int fy[] = { 0, 1, 2, 2, 1, -1, -2, -2, -1 };
+const int fy[] = { 0, 1 ,  2, 2, 1,-1,-2, -2, -1 };
 int main()
 {
 	int dx,dy,hx,hy;
@@ -30,7 +80,7 @@ int main()
 		for (int j = 1; j <= dy; j++)
 		{
 			if (s[i][j])continue;
-			f[i][j] = f[i - 1][j] + f[i][j - 1];
+			f[i][j] = max(f[i][j], f[i - 1][j] + f[i][j - 1]);
 		}
 	}
 	cout << f[dx][dy];
