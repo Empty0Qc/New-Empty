@@ -8,55 +8,32 @@ using namespace std;
 
 #if 1
 
-#include <iostream>
-using namespace std;
+#define uul long long int
 
 int cou = 0,su = 0;
-int arrx[9];
-int arry[9];
-bool check(int x,int y)
-{
-	for(int i = 0;i < 9; i++)
-	{
-		if(arrx[i] == x && arry[i] == y)
-			return true;
-	}
-	return false;
-}
-void _sum(int x,int y)
-{
-	if(x == 0 && y == 0)
-	{
-		cou++;
-		return;
-	}
-	else if(x < 0 || y < 0)
-		return;
-	else if(check(x,y))
-		return;
-	_sum(x,y-1);
-	_sum(x-1,y);
-}
+uul f[30][30];
+bool s[30][30];
+const int fx[] = { 0, -2, -1, 1, 2, 2, 1, -1, -2 };
+const int fy[] = { 0, 1, 2, 2, 1, -1, -2, -2, -1 };
 int main()
 {
 	int dx,dy,hx,hy;
 	cin >> dx >> dy >> hx >> hy;
-	for (int i = -2; i < 3; i++)
+	++dx; ++dy; ++hx; ++hy;
+	f[1][1] = 1;
+	for (int i = 0; i < 9; i++)
 	{
-		for (int j = -2; j < 3; j++)
+		s[fx[i] + hx][fy[i] + hy] = 1;
+	}
+	for (int i = 1; i <= dx; i++)
+	{
+		for (int j = 1; j <= dy; j++)
 		{
-			if (i - j == 1 || i - j == -1)
-			{
-				arrx[su] = hx + i;
-				arry[su] = hy + j;
-				su++;
-			}
+			if (s[i][j])continue;
+			f[i][j] = f[i - 1][j] + f[i][j - 1];
 		}
 	}
-	arrx[su] = hx;
-	arry[su] = hy;
-	su++;
-	_sum(dx, dy);
+	cout << f[dx][dy];
 	return 0;
 }
 
