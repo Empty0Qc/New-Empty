@@ -1,10 +1,11 @@
 #include <iostream>
 #include <math.h>
 #include <vector>
-//#include <string>
-//#include <list>
-//#include <algorithm>
-//using namespace std;
+#include <string>
+#include <list>
+#include <algorithm>
+using namespace std;
+
 
 
 #if 0
