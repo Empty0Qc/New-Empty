@@ -1,12 +1,68 @@
 #include <iostream>
 #include <math.h>
 #include <vector>
-#include <string>
-#include <list>
-#include <algorithm>
-using namespace std;
+//#include <string>
+//#include <list>
+//#include <algorithm>
+//using namespace std;
 
 
+#if 0
+
+int main()
+{
+	int x,y;
+	cin >> x >> y;
+	x++;y++;
+	int arr[100][100] = {0};
+	arr[1][1] = 1;
+	for(int i = 1;i <= x;i++)
+	{
+		for(int j = 1;j <= y;j++)
+		{
+			arr[i][j] = max(arr[i][j],arr[i-1][j]+arr[i][j-1]);
+		}
+	}
+	cout << arr[x][y] << endl;
+	return 0;
+}
+
+#endif
+#if 0
+
+
+int main(int argc, char const *argv[])
+{
+	int arr[] = {1,2,2,3,3,4,4,4,5},zhongshu[10] = {0},cishubiao[1024] = {0},num = 0,min = 0;
+	//num : 众数的个数
+	//min : 评判为众数的标准
+	//cishubiao: 原始数组中每个元素出现的次数
+	//zhongshu: 最终的众数集合
+	int len = (sizeof(arr)/sizeof(arr[0]));
+	for(int i =0;i < len;i++)
+	{
+		cishubiao[arr[i]]++;
+	}
+	for(int i =0;i < len;i++)
+	{
+		if (cishubiao[arr[i]] > min)
+		{
+			min = cishubiao[arr[i]];
+			num = 0;
+			zhongshu[num] = arr[i];
+			num++;
+		}
+		else if (cishubiao[arr[i]] == min && arr[i] != arr[i - 1])
+		{
+			zhongshu[num] = arr[i];
+			num++;
+		}
+	}
+	return 0;
+}
+
+
+#endif
 #if 0
 
 int main()
@@ -23,7 +79,7 @@ int main()
 		mid = arr[siz / 2];
 	for (int i = 0; i < siz; i++)
 	{
-		sum += arr[i];
+		//sum += arr[i];
 		a[arr[i]]++;
 	}
 	avg = sum / siz;
@@ -50,6 +106,9 @@ int main()
 	cout << "该组数据的众数为:   " ;
 	for (int i = 0; i < t; i++){ cout << must[i] << " "; }
 	cout << "\n";
+	cout << "该组数据的中列数为: " << (arr[siz - 1] + arr[0])/2 << endl;
+	cout << "该组数据的第一个四分位数为: " << arr[siz/4] << endl;
+	cout << "该组数据的第三个四分位数为: " << arr[3 * siz / 4] << endl;
 	return 0;
 }
 

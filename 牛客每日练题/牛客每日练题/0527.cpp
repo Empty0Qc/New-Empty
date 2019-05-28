@@ -1,6 +1,48 @@
-//#include <iostream>
-//#include <string>
-//using namespace std;
+﻿#include <iostream>
+#include <string>
+using namespace std;
+
+
+#if 1
+int addAB(int a, int b)
+{
+	if (b == 0) return a;//没有进位时，完成运算，a为最终和。  
+	int sum, carry;
+	sum = a ^ b;//没有进位的加法运算  
+	carry = (a & b) << 1;//进位，左移运算。  
+	return addAB(sum, carry);//递归，相加。  
+}
+int main()
+{
+	int a, b;
+	cin >> a >> b;
+	cout << addAB(a, b) << endl;
+	return 0;
+}
+
+
+#endif
+
+
+#if 0
+int main()
+{
+	int x, y, n;
+	while (cin >> x >> y)
+	{
+		n = (x / 4) * (y / 4) * 8;
+
+		n += (x / 4)*(y % 4) * 2 + (x % 4)*(y / 4) * 2;
+
+		n += (x % 4>1 ? 2 : x % 4) * (y % 4>1 ? 2 : y % 4);
+		n += (x % 4 == y % 4 && x % 4 == 3) ? 1 : 0;
+
+		cout << n << endl;
+	}
+	return 0;
+}
+
+#endif
 //
 //int main()
 //{
@@ -39,7 +81,7 @@
 //}
 
 
-//�������򷽷�
+//两种排序方法
 //#include <iostream>
 //#include <string>
 //using namespace std;
@@ -74,7 +116,7 @@
 //	return 0;
 //}
 
-//����С������
+//求最小公倍数
 //#include <iostream>
 //using namespace std;
 //

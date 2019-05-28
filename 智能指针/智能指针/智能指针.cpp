@@ -1,32 +1,36 @@
 #include <iostream>
-#include <memory>
+#include <cmath>
 using namespace std;
+int arr[100][100] = { 0 };
 
-
-//struct ListNode
-//{
-//	int _data;
-//	shared_ptr<ListNode> _prev;
-//	weak_ptr<ListNode> _next;
-//	~ListNode()
-//	{ 
-//		cout << "~ListNode()" << endl; 
-//	}
-//};
-//int main()
-//{
-//	shared_ptr<ListNode> node1(new ListNode);
-//	shared_ptr<ListNode> node2(new ListNode);
-//	cout << node1.use_count() << endl;
-//	cout << node2.use_count() << endl;
-//	node1->_next = node2;
-//	node2->_prev = node1;
-//	cout << node1.use_count() << endl;
-//	cout << node2.use_count() << endl;
-//	return 0;
-//}
+int max(int a, int b)
+{
+	if (a > b)
+		return a;
+	else
+		return b;
+}
+int ddd(int n, int m)
+{
+	int x = n, y = m;
+	int i, j;
+	arr[1][1] = 1;
+	for (i = 1; i <= x; i++)
+	{
+		for (j = 1; j <= y; j++)
+		{
+			arr[i][j] = max(arr[i][j],arr[i - 1][j] + arr[i][j - 1]);
+		}
+	}
+	int tmp = arr[x][y];
+	return tmp;
+}
 int main()
 {
+	int n, m;
+	cin >> n >> m;
+	n++; m++;
 
+	cout << ddd(n, m) << endl;
 	return 0;
 }
