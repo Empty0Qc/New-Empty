@@ -18,5 +18,8 @@
     <ClCompile Include="test_0529.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="每日题10_0530.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
