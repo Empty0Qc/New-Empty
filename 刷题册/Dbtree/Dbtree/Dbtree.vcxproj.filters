@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="P1422 小玉家的电费.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="P1089 津津的储蓄计划.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="P1980 计数问题.cpp">
+    <ClCompile Include="bstree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

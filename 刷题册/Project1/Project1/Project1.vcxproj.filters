@@ -14,15 +14,4 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="P1422 小玉家的电费.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="P1089 津津的储蓄计划.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="P1980 计数问题.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
