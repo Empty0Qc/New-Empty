@@ -24,5 +24,8 @@
     <ClCompile Include="斐波那契.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="cvte_连续数分组.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
