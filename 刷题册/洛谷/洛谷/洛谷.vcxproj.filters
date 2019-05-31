@@ -24,5 +24,14 @@
     <ClCompile Include="P1980 计数问题.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1008 三连击.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P1424 小鱼的航程%28改进版%29.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="源.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

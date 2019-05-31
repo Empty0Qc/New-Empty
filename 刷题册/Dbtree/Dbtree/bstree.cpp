@@ -146,7 +146,7 @@ public:
 			}
 			cur->_data = leftMost->_data;
 			if (parent->_left == leftMost)
-				parent->_left = nullptr;
+				parent->_left = leftMost->_left;
 			else
 				parent->_right = nullptr;
 			delete leftMost;
