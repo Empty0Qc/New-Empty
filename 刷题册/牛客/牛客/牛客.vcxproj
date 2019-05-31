@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D380398C-AEBE-4D73-A99B-9EA2096A06C5}</ProjectGuid>
-    <RootNamespace>练习</RootNamespace>
+    <ProjectGuid>{E5F78B07-7A27-4E38-B726-6C4AC418B34A}</ProjectGuid>
+    <RootNamespace>牛客</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -64,11 +64,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="0531.cpp" />
-    <ClCompile Include="test_0529.cpp" />
-    <ClCompile Include="斐波那契.cpp" />
-    <ClCompile Include="每日题10_0530.cpp" />
-    <ClCompile Include="cvte_连续数分组.cpp" />
+    <ClCompile Include="构建乘积数组.cpp" />
+    <ClCompile Include="求最大连续bit数.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
