@@ -15,16 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="求最大连续bit数.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="构建乘积数组.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="生成格雷码.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="查找组成一个偶数最接近的两个素数.cpp">
+    <ClCompile Include="AVLtree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

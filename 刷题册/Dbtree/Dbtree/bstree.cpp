@@ -148,7 +148,7 @@ public:
 			if (parent->_left == leftMost)
 				parent->_left = leftMost->_left;
 			else
-				parent->_right = nullptr;
+				parent->_right = leftMost->_left;
 			delete leftMost;
 			leftMost = nullptr;
 		}

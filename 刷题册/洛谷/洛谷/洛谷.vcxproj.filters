@@ -30,7 +30,10 @@
     <ClCompile Include="P1424 小鱼的航程%28改进版%29.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="源.cpp">
+    <ClCompile Include="P1567 统计天数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P1018 乘积最大.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

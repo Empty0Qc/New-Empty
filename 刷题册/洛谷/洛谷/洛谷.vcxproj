@@ -64,12 +64,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="P1018 乘积最大.cpp" />
     <ClCompile Include="P1422 小玉家的电费.cpp" />
     <ClCompile Include="P1089 津津的储蓄计划.cpp" />
     <ClCompile Include="P1980 计数问题.cpp" />
     <ClCompile Include="P1008 三连击.cpp" />
     <ClCompile Include="P1424 小鱼的航程%28改进版%29.cpp" />
-    <ClCompile Include="源.cpp" />
+    <ClCompile Include="P1567 统计天数.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
