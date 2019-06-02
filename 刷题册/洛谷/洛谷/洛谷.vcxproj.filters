@@ -36,5 +36,11 @@
     <ClCompile Include="P1018 乘积最大.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1046 陶陶摘苹果.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xxP1047 校门外的树.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

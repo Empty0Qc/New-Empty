@@ -68,6 +68,7 @@
     <ClCompile Include="Byte.cpp" />
     <ClCompile Include="c.cpp" />
     <ClCompile Include="nok.cpp" />
+    <ClCompile Include="算法笔试.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

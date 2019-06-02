@@ -24,5 +24,8 @@
     <ClCompile Include="Byte.cpp">
       <Filter>头文件\资源文件\源文件</Filter>
     </ClCompile>
+    <ClCompile Include="算法笔试.cpp">
+      <Filter>头文件\资源文件\源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

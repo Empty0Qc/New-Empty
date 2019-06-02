@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="2D Arrays.cpp" />
     <ClCompile Include="Binary Numbers.cpp" />
     <ClCompile Include="Dictionaries and Maps.cpp" />
   </ItemGroup>
