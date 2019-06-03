@@ -69,6 +69,8 @@
     <ClCompile Include="斐波那契.cpp" />
     <ClCompile Include="每日题10_0530.cpp" />
     <ClCompile Include="cvte_连续数分组.cpp" />
+    <ClCompile Include="数据挖掘.cpp" />
+    <ClCompile Include="源.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
