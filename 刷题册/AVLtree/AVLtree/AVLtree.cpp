@@ -58,7 +58,7 @@ public:
 		else
 			parent->_right = cur;
 
-		cur->parent = parent;
+		cur->_parent = parent;
 		//调节
 
 		//1.调平衡因子
@@ -100,27 +100,29 @@ public:
 			parent->_left = SubLR;
 			
 			if (SubLR)
-				SubLR->parent = parent;
+				SubLR->_parent = parent;
 
 			if (parent != _root)
 			{
-				Node* gparent = parent->parent;
+				Node* gparent = parent->_parent;
 				if (gparent->_left == SubL)
 					gparent->_left = SubL;
 				else
 					gparent->_right = SubL;
-				SubL->parent = gparent;
+				SubL->_parent = gparent;
 			}
 			else
 			{
 				_root = SubL;
-				SubL->parent = nullptr;
+				SubL->_parent = nullptr;
 			}
-			parent->parent = SubL;
+			parent->_parent = SubL;
 
 			SubL->_bf = parent->_bf = 0;
 		}
 	}
+private:
+	Node* _root = nullptr;
 };
 
 /*

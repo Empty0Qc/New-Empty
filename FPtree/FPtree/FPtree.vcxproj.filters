@@ -15,28 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="test_0529.cpp">
+    <ClInclude Include="fptree.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="fptree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="每日题10_0530.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="斐波那契.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="cvte_连续数分组.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="0531.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="数据挖掘.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="apriori.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="FP-Growth.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
