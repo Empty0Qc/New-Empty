@@ -73,6 +73,7 @@
     <ClCompile Include="P1424 小鱼的航程%28改进版%29.cpp" />
     <ClCompile Include="P1567 统计天数.cpp" />
     <ClCompile Include="xxP1047 校门外的树.cpp" />
+    <ClCompile Include="P1914 小书童——密码.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

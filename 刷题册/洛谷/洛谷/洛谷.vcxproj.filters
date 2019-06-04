@@ -42,5 +42,8 @@
     <ClCompile Include="xxP1047 校门外的树.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1914 小书童——密码.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

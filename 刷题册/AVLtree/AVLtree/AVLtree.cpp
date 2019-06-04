@@ -83,13 +83,36 @@ public:
 					//ÓÒÐý
 					RotateR(parent);
 				}
-				if (parent->_bf == 2 && cur->_bf == 1)
+				else if (parent->_bf == 2 && cur->_bf == 1)
 				{
 					//×óÐý
+					RotateL(parent);
+				}
+				else if (parent->_bf == 2 && cur->_bf == -1)
+				{
+					subR = parent->_right;
+					subRL = subR->_left;
+					int bf = subRL->_bf;
+					RotateR(parent);
+					RotateL(parent);
+					if (bf == -1)
+					{
+						parent->_bf = 0;
+						subR->_bf = 1;
+					}
+					else if (bf == 1)
+					{
+						parent->_bf = -1;
+						subR->_bf = 0;
+					}
+				}
+				else if (parent->_bf == -2 && cur->_bf == 1)
+				{
+					RotateL(parent);
+					RotateR(parent);
 				}
 			}
 		}
-
 		void RotateR(Node* parent)
 		{
 			Node *SubL = parent->_left;
@@ -120,31 +143,49 @@ public:
 
 			SubL->_bf = parent->_bf = 0;
 		}
+		void RotateL(Node* parent)
+		{
+			Node *SubR = parent->_right;
+			Node *SubRL = SubL->_left;
+
+			//µ¥Á´ 
+			SubL->_left = parent;
+			parent->_right = SubLR;
+
+			if (SubRL)
+				SubRL->_parent = parent;
+
+			if (parent != _root)
+			{
+				Node* gparent = parent->_parent;
+				if (gparent->_left == SubR)
+					gparent->_left = SubR;
+				else
+					gparent->_right = SubR;
+				SubR->_parent = gparent;
+			}
+			else
+			{
+				_root = SubR;
+				SubR->_parent = nullptr;
+			}
+			parent->_parent = SubL;
+
+			SubR->_bf = parent->_bf = 0;
+		}
 	}
 private:
 	Node* _root = nullptr;
 };
 
-/*
-Node *parent = parent;
 
-subR->_left = parent;
-parent->right = subRL;
-
-if(subRL) subRL = parent;
-Node* gparent = parent->parent;
-if(gparent != nullptr)
+int main()
 {
-	if (gparent->_left == parent)
-		gparent->_left = subR;
-	else
-		gparent->_right = subR;
+	AVLTree<int>* a = new AVLTree<int>;
+	a->Insert(1);
+	a->Insert(4);
+	a->Insert(2);
+	a->Insert(4);
+	a->Insert(5);
+	return 0;
 }
-else
-{
-	subR->parent = nullptr;
-	_root = subR;
-}
-parent->parent = subR;
-subR->bf = parent->bf = 0;
-*/

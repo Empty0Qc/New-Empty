@@ -22,10 +22,12 @@ public:
 	BStree(Node* root = nullptr)
 		:_root(root)
 	{}
-	/*BStree(const BStree<T>& bst)
-	{}
+	BStree(const BStree<T>& bst)
+	{
+
+	}
 	BStree<T>& operator=(const BStree<T>& bst)
-	{}*/
+	{}
 	//~BStree()
 	//{}
 

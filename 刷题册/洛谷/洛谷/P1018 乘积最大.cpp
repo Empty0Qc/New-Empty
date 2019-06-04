@@ -1,16 +1,16 @@
-//未解决
-
-#include <iostream>
-#include <string>
-using namespace std;
-
-int main()
-{
-	int n,k;
-	while (cin >> n >> k)
-	{
-		string tmp;
-		cin >> tmp;
-	}
-	return 0;
-}
+////未解决
+//
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//int main()
+//{
+//	int n,k;
+//	while (cin >> n >> k)
+//	{
+//		string tmp;
+//		cin >> tmp;
+//	}
+//	return 0;
+//}
