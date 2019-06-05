@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="P1598 垂直柱状图.cpp" />
     <ClCompile Include="P1018 乘积最大.cpp" />
     <ClCompile Include="P1046 陶陶摘苹果.cpp" />
     <ClCompile Include="P1422 小玉家的电费.cpp" />
@@ -74,6 +75,7 @@
     <ClCompile Include="P1567 统计天数.cpp" />
     <ClCompile Include="xxP1047 校门外的树.cpp" />
     <ClCompile Include="P1914 小书童——密码.cpp" />
+    <ClCompile Include="P1055 ISBN号码.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

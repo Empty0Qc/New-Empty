@@ -45,5 +45,11 @@
     <ClCompile Include="P1914 小书童——密码.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1598 垂直柱状图.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P1055 ISBN号码.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
