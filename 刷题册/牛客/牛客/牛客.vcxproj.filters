@@ -36,16 +36,22 @@
     <ClCompile Include="扑克牌大小.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="跳石板.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="超长正整数相加.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="洗牌.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="源.cpp">
+    <ClCompile Include="xxx火车进站.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="xxx跳石板.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P1028 数的计算.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P1036 选数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

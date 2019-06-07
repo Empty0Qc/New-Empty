@@ -64,15 +64,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="P1036 选数.cpp" />
     <ClCompile Include="洗牌.cpp" />
-    <ClCompile Include="源.cpp" />
+    <ClCompile Include="P1028 数的计算.cpp" />
+    <ClCompile Include="xxx火车进站.cpp" />
     <ClCompile Include="超长正整数相加.cpp" />
     <ClCompile Include="扑克牌大小.cpp" />
     <ClCompile Include="构建乘积数组.cpp" />
     <ClCompile Include="查找组成一个偶数最接近的两个素数.cpp" />
     <ClCompile Include="求最大连续bit数.cpp" />
     <ClCompile Include="参数解析.cpp" />
-    <ClCompile Include="跳石板.cpp" />
+    <ClCompile Include="xxx跳石板.cpp" />
     <ClCompile Include="完全数计算.cpp" />
     <ClCompile Include="生成格雷码.cpp" />
   </ItemGroup>
