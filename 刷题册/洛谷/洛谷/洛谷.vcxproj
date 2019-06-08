@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="P1217 [USACO1.5]回文质数 Prime Palindromes.cpp" />
     <ClCompile Include="P1598 垂直柱状图.cpp" />
     <ClCompile Include="P1018 乘积最大.cpp" />
     <ClCompile Include="P1046 陶陶摘苹果.cpp" />

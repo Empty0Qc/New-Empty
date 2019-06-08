@@ -51,5 +51,8 @@
     <ClCompile Include="P1055 ISBN号码.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1217 [USACO1.5]回文质数 Prime Palindromes.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

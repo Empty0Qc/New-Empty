@@ -48,10 +48,10 @@
     <ClCompile Include="xxx跳石板.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="P1028 数的计算.cpp">
+    <ClCompile Include="统计每个月兔子总数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="P1036 选数.cpp">
+    <ClCompile Include="字符串通配符.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

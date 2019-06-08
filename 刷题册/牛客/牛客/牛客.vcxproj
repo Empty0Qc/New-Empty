@@ -64,10 +64,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="P1036 选数.cpp" />
     <ClCompile Include="洗牌.cpp" />
-    <ClCompile Include="P1028 数的计算.cpp" />
     <ClCompile Include="xxx火车进站.cpp" />
+    <ClCompile Include="字符串通配符.cpp" />
+    <ClCompile Include="统计每个月兔子总数.cpp" />
     <ClCompile Include="超长正整数相加.cpp" />
     <ClCompile Include="扑克牌大小.cpp" />
     <ClCompile Include="构建乘积数组.cpp" />
