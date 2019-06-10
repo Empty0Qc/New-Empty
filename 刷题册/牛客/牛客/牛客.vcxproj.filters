@@ -54,5 +54,11 @@
     <ClCompile Include="字符串通配符.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="汽水瓶.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="求字符串a,b中最长的公共子串.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
