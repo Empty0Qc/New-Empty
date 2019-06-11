@@ -3,7 +3,7 @@
 //#include <string>
 //#include <stdio.h>
 //#include <memory.h>
-//#include <map>
+//#include <unordered_map>
 //using namespace std;
 //
 //
@@ -13,8 +13,8 @@
 //
 //	while (cin >> s1 >> s2)
 //	{
-//		map<string, int> m;
-//		map<string, int> m1;
+//		unordered_map<string, int> m;
+//		unordered_map<string, int> m1;
 //		size_t Max = 0;
 //		string co;
 //		if (s1.size() > s2.size())
@@ -52,7 +52,7 @@
 
 
 ////¶¯Ì¬¹æ»®
-//
+
 //#include <iostream>
 //#include <string>
 //#include <vector>

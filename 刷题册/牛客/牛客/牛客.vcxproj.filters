@@ -60,5 +60,20 @@
     <ClCompile Include="求字符串a,b中最长的公共子串.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="字符串翻转.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="两字符串最长公共子串长度.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="成绩排序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MP3光标位置.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="最难的问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
