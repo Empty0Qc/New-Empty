@@ -64,7 +64,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="P1022 计算器的改良.cpp" />
     <ClCompile Include="P1217 [USACO1.5]回文质数 Prime Palindromes.cpp" />
+    <ClCompile Include="P1579 哥德巴赫猜想（升级版）.cpp" />
     <ClCompile Include="P1598 垂直柱状图.cpp" />
     <ClCompile Include="P1018 乘积最大.cpp" />
     <ClCompile Include="P1046 陶陶摘苹果.cpp" />
@@ -79,6 +81,8 @@
     <ClCompile Include="P1914 小书童——密码.cpp" />
     <ClCompile Include="P1055 ISBN号码.cpp" />
     <ClCompile Include="P1478 陶陶摘苹果（升级版）.cpp" />
+    <ClCompile Include="P1307 数字反转.cpp" />
+    <ClCompile Include="计算字符串的距离.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

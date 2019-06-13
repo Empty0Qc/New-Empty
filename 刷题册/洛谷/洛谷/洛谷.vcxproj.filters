@@ -60,5 +60,17 @@
     <ClCompile Include="P1618 三连击（升级版.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1579 哥德巴赫猜想（升级版）.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P1307 数字反转.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P1022 计算器的改良.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="计算字符串的距离.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
