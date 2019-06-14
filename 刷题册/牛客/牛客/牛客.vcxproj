@@ -76,6 +76,7 @@
     <ClCompile Include="MP3光标位置.cpp" />
     <ClCompile Include="小易的升级之路.cpp" />
     <ClCompile Include="统计每个月兔子总数.cpp" />
+    <ClCompile Include="计算字符串的距离.cpp" />
     <ClCompile Include="超长正整数相加.cpp" />
     <ClCompile Include="扑克牌大小.cpp" />
     <ClCompile Include="构建乘积数组.cpp" />
