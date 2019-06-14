@@ -2,13 +2,12 @@
 //#include <iostream>
 //#include <string>
 //#include <math.h>
-//#include <iomanip>
 //#include <algorithm>
 //using namespace std;
 //char c;//标记一元一次方程的未知变量
 //double cnum;//未知数的参数
 //double cright;
-//void doit(string &s,int flag,double flag1)
+//void doit(string &s, int flag, double flag1)
 //{
 //	//处理未知变量
 //	if (s.find(c) == string::npos)
@@ -33,13 +32,13 @@
 //			for (auto e : tmp)
 //				t = t * 10 + (e - '0');
 //			cnum += flag1 * t;
-//		}	
+//		}
 //	}
 //}
 //int main()
 //{
 //	string s;
-//	while (getline(cin, s))
+//	while (cin >> s)
 //	{
 //		cnum = 0;
 //		cright = 0;
@@ -113,11 +112,10 @@
 //				tmp.clear();
 //			}
 //		}
-//		if (!(cright / cnum))
+//		if ((cright / cnum) > -0.000000000001 && (cright / cnum) < 0.00000000001)
 //			printf("%c=0.000\n", c);
 //		else
 //			printf("%c=%.3lf\n", c, (cright / cnum));
-//
-//}
+//	}
 //	return 0;
 //}

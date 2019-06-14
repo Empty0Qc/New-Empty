@@ -75,6 +75,7 @@
     <ClCompile Include="两字符串最长公共子串长度.cpp" />
     <ClCompile Include="MP3光标位置.cpp" />
     <ClCompile Include="小易的升级之路.cpp" />
+    <ClCompile Include="年终奖.cpp" />
     <ClCompile Include="统计每个月兔子总数.cpp" />
     <ClCompile Include="计算字符串的距离.cpp" />
     <ClCompile Include="超长正整数相加.cpp" />
@@ -86,6 +87,7 @@
     <ClCompile Include="xxx跳石板.cpp" />
     <ClCompile Include="完全数计算.cpp" />
     <ClCompile Include="生成格雷码.cpp" />
+    <ClCompile Include="迷宫问题.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

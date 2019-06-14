@@ -81,5 +81,11 @@
     <ClCompile Include="计算字符串的距离.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="年终奖.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="迷宫问题.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
