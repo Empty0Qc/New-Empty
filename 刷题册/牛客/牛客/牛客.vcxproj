@@ -87,7 +87,7 @@
     <ClCompile Include="xxx跳石板.cpp" />
     <ClCompile Include="完全数计算.cpp" />
     <ClCompile Include="生成格雷码.cpp" />
-    <ClCompile Include="迷宫问题.cpp" />
+    <ClCompile Include="xx迷宫问题.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

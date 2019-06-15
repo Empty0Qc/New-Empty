@@ -69,5 +69,11 @@
     <ClCompile Include="P1022 计算器的改良.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1014 Cantor表.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P1060 开心的金明.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

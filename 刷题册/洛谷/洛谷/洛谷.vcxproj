@@ -64,6 +64,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="P1014 Cantor表.cpp" />
+    <ClCompile Include="P1060 开心的金明.cpp" />
     <ClCompile Include="P1217 [USACO1.5]回文质数 Prime Palindromes.cpp" />
     <ClCompile Include="P1579 哥德巴赫猜想（升级版）.cpp" />
     <ClCompile Include="P1598 垂直柱状图.cpp" />
