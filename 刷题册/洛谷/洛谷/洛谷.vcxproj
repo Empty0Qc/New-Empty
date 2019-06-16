@@ -64,6 +64,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="P1003 铺地毯.cpp" />
     <ClCompile Include="P1014 Cantor表.cpp" />
     <ClCompile Include="P1060 开心的金明.cpp" />
     <ClCompile Include="P1217 [USACO1.5]回文质数 Prime Palindromes.cpp" />

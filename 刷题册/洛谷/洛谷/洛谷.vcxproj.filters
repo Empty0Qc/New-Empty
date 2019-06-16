@@ -75,5 +75,8 @@
     <ClCompile Include="P1060 开心的金明.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1003 铺地毯.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
