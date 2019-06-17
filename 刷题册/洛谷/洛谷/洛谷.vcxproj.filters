@@ -78,5 +78,8 @@
     <ClCompile Include="P1003 铺地毯.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1328 生活大爆炸版石头剪刀布.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
