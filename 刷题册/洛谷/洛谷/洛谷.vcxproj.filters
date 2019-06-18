@@ -84,5 +84,14 @@
     <ClCompile Include="P1067 多项式输出.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1036 选数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P1028 数的计算.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="P1149 火柴棒等式.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

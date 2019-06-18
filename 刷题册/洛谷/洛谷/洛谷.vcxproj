@@ -66,8 +66,11 @@
   <ItemGroup>
     <ClCompile Include="P1003 铺地毯.cpp" />
     <ClCompile Include="P1014 Cantor表.cpp" />
+    <ClCompile Include="P1028 数的计算.cpp" />
+    <ClCompile Include="P1036 选数.cpp" />
     <ClCompile Include="P1060 开心的金明.cpp" />
     <ClCompile Include="P1067 多项式输出.cpp" />
+    <ClCompile Include="P1149 火柴棒等式.cpp" />
     <ClCompile Include="P1217 [USACO1.5]回文质数 Prime Palindromes.cpp" />
     <ClCompile Include="P1328 生活大爆炸版石头剪刀布.cpp" />
     <ClCompile Include="P1579 哥德巴赫猜想（升级版）.cpp" />
