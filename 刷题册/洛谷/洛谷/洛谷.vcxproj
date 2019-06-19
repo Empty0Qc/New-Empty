@@ -66,6 +66,7 @@
   <ItemGroup>
     <ClCompile Include="P1003 铺地毯.cpp" />
     <ClCompile Include="P1014 Cantor表.cpp" />
+    <ClCompile Include="P1023 税收与补贴问题.cpp" />
     <ClCompile Include="P1028 数的计算.cpp" />
     <ClCompile Include="P1036 选数.cpp" />
     <ClCompile Include="P1060 开心的金明.cpp" />
@@ -84,6 +85,7 @@
     <ClCompile Include="P1008 三连击.cpp" />
     <ClCompile Include="P1424 小鱼的航程%28改进版%29.cpp" />
     <ClCompile Include="P1567 统计天数.cpp" />
+    <ClCompile Include="test.cpp" />
     <ClCompile Include="xxP1047 校门外的树.cpp" />
     <ClCompile Include="P1914 小书童——密码.cpp" />
     <ClCompile Include="P1055 ISBN号码.cpp" />
