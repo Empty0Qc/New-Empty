@@ -93,5 +93,8 @@
     <ClCompile Include="xx猜数游戏.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="[编程题]构造回文.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

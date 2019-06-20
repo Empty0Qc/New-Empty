@@ -78,6 +78,7 @@
     <ClCompile Include="小易的升级之路.cpp" />
     <ClCompile Include="年终奖.cpp" />
     <ClCompile Include="xx猜数游戏.cpp" />
+    <ClCompile Include="[编程题]构造回文.cpp" />
     <ClCompile Include="统计每个月兔子总数.cpp" />
     <ClCompile Include="计算字符串的距离.cpp" />
     <ClCompile Include="超长正整数相加.cpp" />

@@ -11,6 +11,7 @@
 //	cin >> exprice >> cost >> tsale;
 //	Max = cost;
 //	while (cin >> tmp1 >> tmp2)
+//	{
 //		if (tmp1 == tmp2 && tmp1 == -1)
 //			break;
 //		if (tmp1 > Max)
