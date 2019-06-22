@@ -90,10 +90,19 @@
     <ClCompile Include="[编程题]构造回文.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="555偶串.cpp">
+    <ClCompile Include="偶串.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="555猜数游戏.cpp">
+    <ClCompile Include="[编程题] DNA片段.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[编程题] 彩色瓷砖.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[编程题] 制造回文.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="~猜数游戏.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

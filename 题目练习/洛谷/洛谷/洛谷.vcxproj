@@ -69,6 +69,8 @@
     <ClCompile Include="P1023 税收与补贴问题.cpp" />
     <ClCompile Include="P1028 数的计算.cpp" />
     <ClCompile Include="P1036 选数.cpp" />
+    <ClCompile Include="P1048 采药.cpp" />
+    <ClCompile Include="P1049 装箱问题.cpp" />
     <ClCompile Include="P1060 开心的金明.cpp" />
     <ClCompile Include="P1067 多项式输出.cpp" />
     <ClCompile Include="P1149 火柴棒等式.cpp" />
@@ -80,13 +82,14 @@
     <ClCompile Include="P1046 陶陶摘苹果.cpp" />
     <ClCompile Include="P1422 小玉家的电费.cpp" />
     <ClCompile Include="P1089 津津的储蓄计划.cpp" />
+    <ClCompile Include="P1616 疯狂的采药.cpp" />
     <ClCompile Include="P1618 三连击（升级版.cpp" />
     <ClCompile Include="P1980 计数问题.cpp" />
     <ClCompile Include="P1008 三连击.cpp" />
     <ClCompile Include="P1424 小鱼的航程%28改进版%29.cpp" />
     <ClCompile Include="P1567 统计天数.cpp" />
     <ClCompile Include="PrimeTable.h" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="打印素数表.cpp" />
     <ClCompile Include="xxP1047 校门外的树.cpp" />
     <ClCompile Include="P1914 小书童——密码.cpp" />
     <ClCompile Include="P1055 ISBN号码.cpp" />
