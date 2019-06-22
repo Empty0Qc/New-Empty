@@ -77,6 +77,7 @@
     <ClCompile Include="P1217 [USACO1.5]回文质数 Prime Palindromes.cpp" />
     <ClCompile Include="P1328 生活大爆炸版石头剪刀布.cpp" />
     <ClCompile Include="P1579 哥德巴赫猜想（升级版）.cpp" />
+    <ClCompile Include="P1582 倒水.cpp" />
     <ClCompile Include="P1598 垂直柱状图.cpp" />
     <ClCompile Include="P1018 乘积最大.cpp" />
     <ClCompile Include="P1046 陶陶摘苹果.cpp" />

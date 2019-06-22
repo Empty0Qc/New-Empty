@@ -111,5 +111,8 @@
     <ClCompile Include="P1049 装箱问题.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1582 倒水.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
