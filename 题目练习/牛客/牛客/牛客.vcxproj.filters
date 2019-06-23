@@ -105,5 +105,17 @@
     <ClCompile Include="~猜数游戏.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="[编程题]福尔摩斯的约会 (20).cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[编程题]德才论 (25).cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[编程题]1016. 部分A+B (15).cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="A除以B (20).cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

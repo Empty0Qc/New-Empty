@@ -64,9 +64,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="A除以B (20).cpp" />
     <ClCompile Include="[编程题] DNA片段.cpp" />
     <ClCompile Include="[编程题] 制造回文.cpp" />
     <ClCompile Include="[编程题] 彩色瓷砖.cpp" />
+    <ClCompile Include="[编程题]1016. 部分A+B (15).cpp" />
+    <ClCompile Include="[编程题]德才论 (25).cpp" />
+    <ClCompile Include="[编程题]福尔摩斯的约会 (20).cpp" />
     <ClCompile Include="偶串.cpp" />
     <ClCompile Include="成绩排序.cpp" />
     <ClCompile Include="最难的问题.cpp" />
