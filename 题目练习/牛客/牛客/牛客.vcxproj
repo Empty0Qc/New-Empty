@@ -64,7 +64,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="A除以B (20).cpp" />
+    <ClCompile Include="[编程题] 跟奥巴马一起编程(15).cpp" />
+    <ClCompile Include="[编程题]在霍格沃茨找零钱（20）.cpp" />
+    <ClCompile Include="~A除以B %2820%29.cpp" />
     <ClCompile Include="[编程题] DNA片段.cpp" />
     <ClCompile Include="[编程题] 制造回文.cpp" />
     <ClCompile Include="[编程题] 彩色瓷砖.cpp" />

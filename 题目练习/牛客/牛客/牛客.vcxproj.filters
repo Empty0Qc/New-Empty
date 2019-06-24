@@ -114,7 +114,13 @@
     <ClCompile Include="[编程题]1016. 部分A+B (15).cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="A除以B (20).cpp">
+    <ClCompile Include="~A除以B %2820%29.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[编程题] 跟奥巴马一起编程(15).cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[编程题]在霍格沃茨找零钱（20）.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
