@@ -123,5 +123,17 @@
     <ClCompile Include="[编程题]在霍格沃茨找零钱（20）.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="星际密码.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="树根.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="锤子剪刀布.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[编程题]1019. 数字黑洞.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
