@@ -135,5 +135,14 @@
     <ClCompile Include="[编程题]1019. 数字黑洞.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="[待解决]替换空格.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="快到碗里来[大数相除问题].cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="月饼.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

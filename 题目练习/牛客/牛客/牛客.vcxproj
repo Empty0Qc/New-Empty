@@ -75,9 +75,12 @@
     <ClCompile Include="[编程题]德才论 (25).cpp" />
     <ClCompile Include="[编程题]福尔摩斯的约会 (20).cpp" />
     <ClCompile Include="偶串.cpp" />
+    <ClCompile Include="快到碗里来[大数相除问题].cpp" />
     <ClCompile Include="成绩排序.cpp" />
     <ClCompile Include="星际密码.cpp" />
+    <ClCompile Include="[待解决]替换空格.cpp" />
     <ClCompile Include="最难的问题.cpp" />
+    <ClCompile Include="月饼.cpp" />
     <ClCompile Include="树根.cpp" />
     <ClCompile Include="求字符串a,b中最长的公共子串.cpp" />
     <ClCompile Include="洗牌.cpp" />
