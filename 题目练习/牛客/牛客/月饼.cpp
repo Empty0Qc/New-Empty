@@ -1,21 +1,22 @@
-#include <stdio.h>
+//https://www.nowcoder.com/questionTerminal/6fc9a928c7654b0fbc37d16b8bd29ff9
 #include <vector>
-#include <algorithm>
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 struct Solution
 {
-	bool operator<(const Solution& s)
+	bool operator<(const Solution& m)
 	{
-		return price > s.price;
+		return price > m.price;
 	}
 	int t;
+	int s;
 	double price;
 };
 int main()
 {
-	int n,t;
+	int n, t;
 	while (cin >> n >> t)
 	{
 		double sum = 0;
@@ -27,9 +28,8 @@ int main()
 		}
 		for (int i = 0; i < n; i++)
 		{
-			double tmp;
-			cin >> tmp;
-			v[i].price = tmp / v[i].t;
+			cin >> v[i].s;
+			v[i].price = (double)v[i].s / (double)v[i].t;
 		}
 		sort(v.begin(), v.end());
 		for (int i = 0; i < n; i++)
@@ -37,13 +37,13 @@ int main()
 			if (v[i].t < t)
 			{
 				t -= v[i].t;
-				sum += v[i].t * v[i].price;
+				sum += v[i].s;
 				continue;
 			}
-				sum += t * v[i].price;
-				break;
+			sum += t * v[i].price;
+			break;
 		}
-		printf("%.2f", sum);
+		printf("%.2lf", sum);
 	}
 	return 0;
 }

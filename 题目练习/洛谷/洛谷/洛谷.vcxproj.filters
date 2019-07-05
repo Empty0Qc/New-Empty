@@ -117,5 +117,8 @@
     <ClCompile Include="P1177 【模板】快速排序.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="P1219 八皇后.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

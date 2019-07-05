@@ -76,6 +76,7 @@
     <ClCompile Include="P1149 火柴棒等式.cpp" />
     <ClCompile Include="P1177 【模板】快速排序.cpp" />
     <ClCompile Include="P1217 [USACO1.5]回文质数 Prime Palindromes.cpp" />
+    <ClCompile Include="P1219 八皇后.cpp" />
     <ClCompile Include="P1328 生活大爆炸版石头剪刀布.cpp" />
     <ClCompile Include="P1579 哥德巴赫猜想（升级版）.cpp" />
     <ClCompile Include="P1582 倒水.cpp" />

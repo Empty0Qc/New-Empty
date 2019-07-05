@@ -81,6 +81,7 @@
     <ClCompile Include="[待解决]替换空格.cpp" />
     <ClCompile Include="最难的问题.cpp" />
     <ClCompile Include="月饼.cpp" />
+    <ClCompile Include="有假币.cpp" />
     <ClCompile Include="树根.cpp" />
     <ClCompile Include="求字符串a,b中最长的公共子串.cpp" />
     <ClCompile Include="洗牌.cpp" />
@@ -94,6 +95,9 @@
     <ClCompile Include="年终奖.cpp" />
     <ClCompile Include="~猜数游戏.cpp" />
     <ClCompile Include="[编程题]构造回文.cpp" />
+    <ClCompile Include="个位数统计.cpp" />
+    <ClCompile Include="猴子分桃.cpp" />
+    <ClCompile Include="组个最小数.cpp" />
     <ClCompile Include="统计每个月兔子总数.cpp" />
     <ClCompile Include="计算字符串的距离.cpp" />
     <ClCompile Include="超长正整数相加.cpp" />

@@ -144,5 +144,17 @@
     <ClCompile Include="月饼.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="猴子分桃.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="个位数统计.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="组个最小数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="有假币.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
