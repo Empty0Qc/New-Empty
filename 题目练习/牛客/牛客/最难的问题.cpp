@@ -1,5 +1,5 @@
 //
-
+//
 //#include <iostream>
 //#include <string>
 //#include <vector>
@@ -21,7 +21,7 @@
 //	}
 //	return 0;
 //}
-
+//
 //int main()
 //{
 //	char s;
