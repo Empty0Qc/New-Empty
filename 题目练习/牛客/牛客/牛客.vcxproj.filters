@@ -159,5 +159,20 @@
     <ClCompile Include="因子个数.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="翻转数列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="纸牌游戏.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="贪吃的小Q.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="数字和为sum的方法数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="年会抽奖.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
