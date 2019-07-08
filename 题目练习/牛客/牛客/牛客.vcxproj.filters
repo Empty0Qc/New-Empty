@@ -174,5 +174,11 @@
     <ClCompile Include="年会抽奖.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="分解因数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="美国节日.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
