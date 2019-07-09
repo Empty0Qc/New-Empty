@@ -81,6 +81,7 @@
     <ClCompile Include="快到碗里来[大数相除问题].cpp" />
     <ClCompile Include="成绩排序.cpp" />
     <ClCompile Include="数字和为sum的方法数.cpp" />
+    <ClCompile Include="斐波那契凤尾.cpp" />
     <ClCompile Include="星际密码.cpp" />
     <ClCompile Include="[待解决]替换空格.cpp" />
     <ClCompile Include="最难的问题.cpp" />
@@ -100,6 +101,7 @@
     <ClCompile Include="~猜数游戏.cpp" />
     <ClCompile Include="[编程题]构造回文.cpp" />
     <ClCompile Include="个位数统计.cpp" />
+    <ClCompile Include="淘宝网店.cpp" />
     <ClCompile Include="猴子分桃.cpp" />
     <ClCompile Include="纸牌游戏.cpp" />
     <ClCompile Include="组个最小数.cpp" />
