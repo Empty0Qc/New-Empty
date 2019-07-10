@@ -186,5 +186,8 @@
     <ClCompile Include="淘宝网店.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="剪花布条.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
