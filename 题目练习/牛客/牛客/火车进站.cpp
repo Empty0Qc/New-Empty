@@ -155,3 +155,52 @@
 //	//cin >> n;
 //	return 0;
 //}
+
+//#include <iostream>
+//#include <vector>
+//#include <stack>
+//#include <algorithm>
+//using namespace std;
+//
+////is_order函数用来判断当前排序即v1数组是否可以通过数组v压栈得出
+//bool is_order(vector<int> &v, vector<int> &v1, int n)
+//{
+//	if (v.size() == 0 || v1.size() == 0 || n <= 0)
+//		return false;
+//	stack<int> s;
+//	int j = 0;
+//	for (size_t i = 0; i < v.size(); i++)
+//	{
+//		s.push(v[i]);
+//		while (j < n && s.size() != 0 && v1[j] == s.top())
+//		{
+//			s.pop();
+//			j++;
+//		}
+//	}
+//	return s.empty();
+//}
+//int main()
+//{
+//	int n;
+//	while (cin >> n)
+//	{
+//		vector<int> v(n),v1(n);
+//		for (int i = 0; i < n;i++)
+//			cin >> v[i];
+//		//把输入的数据数组复制一份到v1
+//		v1.assign(v.begin(),v.end());
+//		//对v1进行排序 ----------由题目输出要以字典序排序输出可知
+//		sort(v1.begin(), v1.end());
+//		do
+//		{
+//			if (is_order(v, v1, n))
+//			{
+//				for (auto e : v1)
+//					cout << e << " ";
+//				cout << endl;
+//			}
+//		} while (next_permutation(v1.begin(), v1.end()));
+//	}
+//	return 0;
+//}

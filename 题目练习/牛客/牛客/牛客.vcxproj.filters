@@ -42,9 +42,6 @@
     <ClCompile Include="洗牌.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="xxx火车进站.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="xxx跳石板.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -187,6 +184,21 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="剪花布条.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="客似云来.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="深搜三张扑克.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="火车进站.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="收件人列表.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="养兔子.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

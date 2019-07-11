@@ -64,6 +64,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="养兔子.cpp" />
+    <ClCompile Include="收件人列表.cpp" />
+    <ClCompile Include="深搜三张扑克.cpp" />
     <ClCompile Include="[编程题] 跟奥巴马一起编程(15).cpp" />
     <ClCompile Include="[编程题]1019. 数字黑洞.cpp" />
     <ClCompile Include="[编程题]在霍格沃茨找零钱（20）.cpp" />
@@ -78,6 +81,7 @@
     <ClCompile Include="分解因数.cpp" />
     <ClCompile Include="剪花布条.cpp" />
     <ClCompile Include="因子个数.cpp" />
+    <ClCompile Include="客似云来.cpp" />
     <ClCompile Include="年会抽奖.cpp" />
     <ClCompile Include="快到碗里来[大数相除问题].cpp" />
     <ClCompile Include="成绩排序.cpp" />
@@ -91,7 +95,7 @@
     <ClCompile Include="树根.cpp" />
     <ClCompile Include="求字符串a,b中最长的公共子串.cpp" />
     <ClCompile Include="洗牌.cpp" />
-    <ClCompile Include="xxx火车进站.cpp" />
+    <ClCompile Include="火车进站.cpp" />
     <ClCompile Include="字符串通配符.cpp" />
     <ClCompile Include="汽水瓶.cpp" />
     <ClCompile Include="字符串翻转.cpp" />
