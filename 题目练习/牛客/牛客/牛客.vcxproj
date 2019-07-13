@@ -64,7 +64,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Rational Arithmetic.cpp" />
     <ClCompile Include="养兔子.cpp" />
+    <ClCompile Include="抄送列表.cpp" />
     <ClCompile Include="收件人列表.cpp" />
     <ClCompile Include="深搜三张扑克.cpp" />
     <ClCompile Include="[编程题] 跟奥巴马一起编程(15).cpp" />

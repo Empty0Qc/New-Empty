@@ -201,5 +201,11 @@
     <ClCompile Include="养兔子.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="抄送列表.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Rational Arithmetic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
