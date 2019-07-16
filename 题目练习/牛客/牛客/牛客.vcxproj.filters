@@ -204,7 +204,19 @@
     <ClCompile Include="抄送列表.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Rational Arithmetic.cpp">
+    <ClCompile Include="~Rational Arithmetic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="电话号码.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="求和.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="单词倒排.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="驼峰命名法.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

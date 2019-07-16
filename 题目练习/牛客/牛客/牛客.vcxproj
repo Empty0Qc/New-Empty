@@ -64,10 +64,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Rational Arithmetic.cpp" />
+    <ClCompile Include="~Rational Arithmetic.cpp" />
     <ClCompile Include="养兔子.cpp" />
+    <ClCompile Include="单词倒排.cpp" />
     <ClCompile Include="抄送列表.cpp" />
     <ClCompile Include="收件人列表.cpp" />
+    <ClCompile Include="求和.cpp" />
     <ClCompile Include="深搜三张扑克.cpp" />
     <ClCompile Include="[编程题] 跟奥巴马一起编程(15).cpp" />
     <ClCompile Include="[编程题]1019. 数字黑洞.cpp" />
@@ -110,6 +112,7 @@
     <ClCompile Include="个位数统计.cpp" />
     <ClCompile Include="淘宝网店.cpp" />
     <ClCompile Include="猴子分桃.cpp" />
+    <ClCompile Include="电话号码.cpp" />
     <ClCompile Include="纸牌游戏.cpp" />
     <ClCompile Include="组个最小数.cpp" />
     <ClCompile Include="统计每个月兔子总数.cpp" />
@@ -128,6 +131,7 @@
     <ClCompile Include="生成格雷码.cpp" />
     <ClCompile Include="xx迷宫问题.cpp" />
     <ClCompile Include="锤子剪刀布.cpp" />
+    <ClCompile Include="驼峰命名法.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
