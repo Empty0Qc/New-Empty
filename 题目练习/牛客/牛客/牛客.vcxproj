@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -13,18 +13,19 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E5F78B07-7A27-4E38-B726-6C4AC418B34A}</ProjectGuid>
     <RootNamespace>牛客</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -64,12 +65,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="mkdir.cpp" />
     <ClCompile Include="~Rational Arithmetic.cpp" />
     <ClCompile Include="乒乓球筐.cpp" />
     <ClCompile Include="养兔子.cpp" />
     <ClCompile Include="单词倒排.cpp" />
     <ClCompile Include="抄送列表.cpp" />
     <ClCompile Include="收件人列表.cpp" />
+    <ClCompile Include="数据库连接数.cpp" />
     <ClCompile Include="查找兄弟单词.cpp" />
     <ClCompile Include="求和.cpp" />
     <ClCompile Include="深搜三张扑克.cpp" />
@@ -115,6 +118,7 @@
     <ClCompile Include="淘宝网店.cpp" />
     <ClCompile Include="猴子分桃.cpp" />
     <ClCompile Include="电话号码.cpp" />
+    <ClCompile Include="简单错误记录.cpp" />
     <ClCompile Include="纸牌游戏.cpp" />
     <ClCompile Include="组个最小数.cpp" />
     <ClCompile Include="统计每个月兔子总数.cpp" />

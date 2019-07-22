@@ -142,7 +142,6 @@ print(counter)
 #import callc as c
 # 不太推荐第二种，推荐第一种
 from calc import add
-
 ret = add(10,20)
 print(ret)
 
