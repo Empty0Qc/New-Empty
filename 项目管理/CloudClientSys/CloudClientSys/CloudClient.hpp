@@ -88,11 +88,6 @@ public:
 		return;
 	}
 };
-
-
-
-
-
 class CloudClient{
 private:
 	std::unordered_map<std::string, std::string> _backup_list;

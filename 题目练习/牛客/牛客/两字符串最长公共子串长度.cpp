@@ -14,7 +14,7 @@
 //		{
 //			if (smin[i - 1] == smax[j - 1])
 //			{
-//				dp[i][j] = dp[i - 1][j - 1] + 1;
+//				dp[i][j] = dp[i - 1][j	 - 1] + 1;
 //				if (dp[i][j] > Max)
 //				{
 //					Max = dp[i][j];

@@ -234,5 +234,23 @@
     <ClCompile Include="mkdir.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="红与黑.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="蘑菇阵.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="最长公共子序列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="字符串计数.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="发邮件.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="最长上升子序列.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
