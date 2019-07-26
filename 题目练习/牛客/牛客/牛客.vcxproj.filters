@@ -252,5 +252,11 @@
     <ClCompile Include="最长上升子序列.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="五子棋.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Emacs计算器.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
