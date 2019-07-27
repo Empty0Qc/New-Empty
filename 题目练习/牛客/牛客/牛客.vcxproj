@@ -80,6 +80,7 @@
     <ClCompile Include="最长上升子序列.cpp" />
     <ClCompile Include="最长公共子序列.cpp" />
     <ClCompile Include="查找兄弟单词.cpp" />
+    <ClCompile Include="母牛生小牛.cpp" />
     <ClCompile Include="求和.cpp" />
     <ClCompile Include="深搜三张扑克.cpp" />
     <ClCompile Include="[编程题] 跟奥巴马一起编程(15).cpp" />
@@ -133,6 +134,7 @@
     <ClCompile Include="蘑菇阵.cpp" />
     <ClCompile Include="计算字符串的距离.cpp" />
     <ClCompile Include="贪吃的小Q.cpp" />
+    <ClCompile Include="走迷宫.cpp" />
     <ClCompile Include="超长正整数相加.cpp" />
     <ClCompile Include="扑克牌大小.cpp" />
     <ClCompile Include="构建乘积数组.cpp" />

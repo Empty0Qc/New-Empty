@@ -258,5 +258,11 @@
     <ClCompile Include="Emacs计算器.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="母牛生小牛.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="走迷宫.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
