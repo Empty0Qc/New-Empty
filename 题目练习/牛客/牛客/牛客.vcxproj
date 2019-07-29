@@ -65,18 +65,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Election_Time.cpp" />
     <ClCompile Include="Emacs计算器.cpp" />
+    <ClCompile Include="iCow.cpp" />
     <ClCompile Include="mkdir.cpp" />
+    <ClCompile Include="[USACO08JAN]牛大赛Cow Contest.cpp" />
     <ClCompile Include="~Rational Arithmetic.cpp" />
     <ClCompile Include="乒乓球筐.cpp" />
     <ClCompile Include="五子棋.cpp" />
     <ClCompile Include="养兔子.cpp" />
     <ClCompile Include="单词倒排.cpp" />
     <ClCompile Include="发邮件.cpp" />
+    <ClCompile Include="句子逆置.cpp" />
     <ClCompile Include="字符串计数.cpp" />
+    <ClCompile Include="幂次方.cpp" />
     <ClCompile Include="抄送列表.cpp" />
     <ClCompile Include="收件人列表.cpp" />
     <ClCompile Include="数据库连接数.cpp" />
+    <ClCompile Include="最小公倍数.cpp" />
     <ClCompile Include="最长上升子序列.cpp" />
     <ClCompile Include="最长公共子序列.cpp" />
     <ClCompile Include="查找兄弟单词.cpp" />
@@ -133,6 +139,7 @@
     <ClCompile Include="翻转数列.cpp" />
     <ClCompile Include="蘑菇阵.cpp" />
     <ClCompile Include="计算字符串的距离.cpp" />
+    <ClCompile Include="质数因子.cpp" />
     <ClCompile Include="贪吃的小Q.cpp" />
     <ClCompile Include="走迷宫.cpp" />
     <ClCompile Include="超长正整数相加.cpp" />
@@ -145,6 +152,7 @@
     <ClCompile Include="完全数计算.cpp" />
     <ClCompile Include="生成格雷码.cpp" />
     <ClCompile Include="xx迷宫问题.cpp" />
+    <ClCompile Include="进制转换.cpp" />
     <ClCompile Include="锤子剪刀布.cpp" />
     <ClCompile Include="驼峰命名法.cpp" />
     <ClCompile Include="红与黑.cpp" />

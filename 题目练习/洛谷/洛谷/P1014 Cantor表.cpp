@@ -1,4 +1,4 @@
-////https://www.luogu.org/problemnew/show/P1014
+//https://www.luogu.org/problemnew/show/P1014
 //#include <iostream>
 //using namespace std;
 //
