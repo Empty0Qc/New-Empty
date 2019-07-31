@@ -288,5 +288,26 @@
     <ClCompile Include="[USACO08JAN]牛大赛Cow Contest.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="[编程题]算法基础-字符移位.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="[编程题]有趣的数字.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="坐标移动.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="科学计数法.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="反转链表.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="密码验证合格程序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="字符串排序.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
