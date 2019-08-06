@@ -14,8 +14,8 @@
 #define CLIENT_BACKUP_DIR "backup"
 #define CLIENT_BACKUP_INFO_FILE "back.list"
 
-//#define SERVER_IP "39.106.98.249"
-#define SERVER_IP "49.234.188.82"
+#define SERVER_IP "116.62.111.92"
+//#define SERVER_IP "49.234.188.82"
 #define SERVER_PORT 9000
 #define BACKUP_URL "/list/"
 #define RANGE_MAX_SIZE (10 << 20)
