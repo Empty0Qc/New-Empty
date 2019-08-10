@@ -10,7 +10,7 @@
 #include <unordered_map>
 #include "httplib.h"
 
-
+#define _TEST_  true
 #define CLIENT_BACKUP_DIR "backup"
 #define CLIENT_BACKUP_INFO_FILE "back.list"
 
@@ -93,10 +93,13 @@ private:
 	std::unordered_map<std::string, std::string> _backup_list;
 private:
 	bool GetBackupInfo(){
-		std::cout << "into GetBackupInfo" << std::endl;
+		if(_TEST_)
+		    std::cout << "进入待备份文件仓" << std::endl;
+		//获取待备份文件仓目录
 		bf::path path(CLIENT_BACKUP_INFO_FILE);
+		//该目录不存在直接报错返回
 		if (!bf::exists(path)){
-			std::cerr << "list file " << path.string() << " is not exist\n";
+			std::cerr << "Backup information table " << path.string() << " is not exist\n";
 			return false;
 		}
 		int64_t fsize = bf::file_size(path);
@@ -110,17 +113,19 @@ private:
 		std::ifstream file(CLIENT_BACKUP_INFO_FILE, std::ios::binary);
 
 		if (!file.is_open()){
-			std::cerr << "list file open error\n";
+			std::cerr << "Backup information table failed to open\n";
 			return false;
 		}
 
 		file.read(&body[0], fsize);
 		if (!file.good()){
-			std::cerr << "read list file body error\n";
+			std::cerr << "Backup information table operation problem\n";
 			return false;
 		}
 		file.close();
 
+
+		/*--------------------------*/
 		std::vector<std::string> list;
 		boost::split(list, body, boost::is_any_of("\n"));//字符串切割工具 boost::algorithm::split
 		for (auto e : list){
@@ -135,29 +140,11 @@ private:
 		}
 		return true;
 	}
-	//将备份信息保存到指定文件中,就是将新的修改的信息保存进文件
-	bool SetBackupInfo(){
-		std::string body;
-		for (auto e : _backup_list){
-			body += e.first + " " + e.second + "\n";
-		}
-		std::ofstream file(CLIENT_BACKUP_INFO_FILE, std::ios::binary);
-		if (!file.is_open()){
-			std::cerr << "open list file error\n";
-			return false;
-		}
-		file.write(&body[0], body.size());
-		if (!file.good()){
-			file.close();
-			std::cerr << "set backup info error\n";
-			return false;
-		}
-		file.close();
-		return true;
-	}
+
 	//监控目录下的文件是否需要备份
 	bool BackupDirListen(const std::string &path){
-		std::cout << "into BackupDirListen" << std::endl;
+		if (_TEST_)
+			std::cout << "Check the directory to be backed up - > is checking!" << std::endl;
 		bf::directory_iterator item_begin(path);
 		bf::directory_iterator item_end;
 		for (; item_begin != item_end; ++item_begin){
@@ -176,9 +163,30 @@ private:
 		}
 		return true;
 	}
+	//将备份信息保存到指定文件中,就是将新的修改的信息保存进文件
+	bool SetBackupInfo() {
+		std::string body;
+		for (auto e : _backup_list) {
+			body += e.first + " " + e.second + "\n";
+		}
+		std::ofstream file(CLIENT_BACKUP_INFO_FILE, std::ios::binary);
+		if (!file.is_open()) {
+			std::cerr << "open list file error\n";
+			return false;
+		}
+		file.write(&body[0], body.size());
+		if (!file.good()) {
+			file.close();
+			std::cerr << "set backup info error\n";
+			return false;
+		}
+		file.close();
+		return true;
+	}
 	//添加etag信息
 	bool AddBackInfo(const std::string &file){
-		std::cout << "into AddBackInfo" << std::endl;
+		if (_TEST_)
+			std::cout << "Add the current file Etag information to the system" << std::endl;
 		std::string etag;
 		if (GetFileEtag(file, etag) == false){
 			return false;
@@ -199,10 +207,11 @@ private:
 		return true;
 	}
 	bool GetFileEtag(const std::string &file, std::string &etag){
-		std::cout << "into GetFileEtag" << std::endl;
+		if (_TEST_)
+			std::cout << "Gets the current file Etag information" << std::endl;
 		bf::path path(file);
 		if (!bf::exists(path)){
-			std::cerr << "get file " << file << " etag error\n";
+			std::cerr << "Gets the current file " << file << " Etag information Error\n";
 			return false;
 		}
 		int64_t fsize = bf::file_size(path);
@@ -215,7 +224,8 @@ private:
 	
 
 	bool PutFileData(const std::string &file){
-		std::cout << "into PutFileData" << std::endl;
+		if (_TEST_)
+			std::cout << "Upload current file" << std::endl;
 		//分块传输大小(10M)对文件内容进行分块传输
 		//通过获取分块传输是否成功判断真个文件是否上传成功
 		//选择多线程处理
@@ -274,7 +284,7 @@ public:
 			bf::create_directory(file);
 		}
 	}
-	bool Start()
+	void Start()
 	{
 		GetBackupInfo();
 		while (1)
@@ -283,7 +293,6 @@ public:
 			SetBackupInfo();
 			Sleep(5000);
 		}
-		return true;
 	}
 };
 #endif

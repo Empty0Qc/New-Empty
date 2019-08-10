@@ -76,6 +76,7 @@
     <ClCompile Include="乒乓球筐.cpp" />
     <ClCompile Include="五子棋.cpp" />
     <ClCompile Include="养兔子.cpp" />
+    <ClCompile Include="判断点P是否在ABC内.cpp" />
     <ClCompile Include="单词倒排.cpp" />
     <ClCompile Include="反转链表.cpp" />
     <ClCompile Include="发邮件.cpp" />
