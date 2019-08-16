@@ -72,6 +72,7 @@
     <ClCompile Include="[USACO08JAN]牛大赛Cow Contest.cpp" />
     <ClCompile Include="[编程题]有趣的数字.cpp" />
     <ClCompile Include="[编程题]算法基础-字符移位.cpp" />
+    <ClCompile Include="[编程题]纸牌游戏.cpp" />
     <ClCompile Include="~Rational Arithmetic.cpp" />
     <ClCompile Include="乒乓球筐.cpp" />
     <ClCompile Include="五子棋.cpp" />
@@ -125,6 +126,7 @@
     <ClCompile Include="求字符串a,b中最长的公共子串.cpp" />
     <ClCompile Include="洗牌.cpp" />
     <ClCompile Include="源.cpp" />
+    <ClCompile Include="源1.cpp" />
     <ClCompile Include="火车进站.cpp" />
     <ClCompile Include="字符串通配符.cpp" />
     <ClCompile Include="汽水瓶.cpp" />
