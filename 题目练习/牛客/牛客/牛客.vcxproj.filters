@@ -321,5 +321,8 @@
     <ClCompile Include="[编程题]纸牌游戏.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="[编程题]小Q的歌单.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

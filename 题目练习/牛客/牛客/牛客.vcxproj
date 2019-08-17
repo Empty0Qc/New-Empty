@@ -70,6 +70,7 @@
     <ClCompile Include="iCow.cpp" />
     <ClCompile Include="mkdir.cpp" />
     <ClCompile Include="[USACO08JAN]牛大赛Cow Contest.cpp" />
+    <ClCompile Include="[编程题]小Q的歌单.cpp" />
     <ClCompile Include="[编程题]有趣的数字.cpp" />
     <ClCompile Include="[编程题]算法基础-字符移位.cpp" />
     <ClCompile Include="[编程题]纸牌游戏.cpp" />
