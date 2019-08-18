@@ -315,13 +315,13 @@
     <ClCompile Include="源.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="源1.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="[编程题]纸牌游戏.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="[编程题]小Q的歌单.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="~24点.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

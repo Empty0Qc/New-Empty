@@ -127,7 +127,7 @@
     <ClCompile Include="求字符串a,b中最长的公共子串.cpp" />
     <ClCompile Include="洗牌.cpp" />
     <ClCompile Include="源.cpp" />
-    <ClCompile Include="源1.cpp" />
+    <ClCompile Include="~24点.cpp" />
     <ClCompile Include="火车进站.cpp" />
     <ClCompile Include="字符串通配符.cpp" />
     <ClCompile Include="汽水瓶.cpp" />
