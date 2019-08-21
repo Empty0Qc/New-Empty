@@ -16,7 +16,7 @@
 
 #define SERVER_IP "116.62.111.92"
 //#define SERVER_IP "49.234.188.82"
-#define SERVER_PORT 9000
+#define SERVER_PORT 80
 #define BACKUP_URL "/list/"
 #define RANGE_MAX_SIZE (10 << 20)
 // 10 << 20 == 10M
