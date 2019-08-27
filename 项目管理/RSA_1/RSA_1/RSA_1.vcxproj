@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{AA182EAD-93C0-4E97-AADD-1A4CD8FA40DD}</ProjectGuid>
-    <RootNamespace>洛谷</RootNamespace>
+    <ProjectGuid>{1E4B8037-793D-465F-9EC9-B6DB795BDB2F}</ProjectGuid>
+    <RootNamespace>RSA_1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -20,14 +20,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -45,9 +45,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>D:\360MoveData\Users\Administrator\Desktop\New Code\boost_1_58_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -65,41 +68,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="P1003 铺地毯.cpp" />
-    <ClCompile Include="P1014 Cantor表.cpp" />
-    <ClCompile Include="P1023 税收与补贴问题.cpp" />
-    <ClCompile Include="P1028 数的计算.cpp" />
-    <ClCompile Include="P1036 选数.cpp" />
-    <ClCompile Include="P1048 采药.cpp" />
-    <ClCompile Include="P1049 装箱问题.cpp" />
-    <ClCompile Include="P1060 开心的金明.cpp" />
-    <ClCompile Include="P1067 多项式输出.cpp" />
-    <ClCompile Include="P1149 火柴棒等式.cpp" />
-    <ClCompile Include="P1177 【模板】快速排序.cpp" />
-    <ClCompile Include="P1217 [USACO1.5]回文质数 Prime Palindromes.cpp" />
-    <ClCompile Include="P1219 八皇后.cpp" />
-    <ClCompile Include="P1328 生活大爆炸版石头剪刀布.cpp" />
-    <ClCompile Include="P1579 哥德巴赫猜想（升级版）.cpp" />
-    <ClCompile Include="P1582 倒水.cpp" />
-    <ClCompile Include="P1598 垂直柱状图.cpp" />
-    <ClCompile Include="P1018 乘积最大.cpp" />
-    <ClCompile Include="P1046 陶陶摘苹果.cpp" />
-    <ClCompile Include="P1422 小玉家的电费.cpp" />
-    <ClCompile Include="P1089 津津的储蓄计划.cpp" />
-    <ClCompile Include="P1616 疯狂的采药.cpp" />
-    <ClCompile Include="P1618 三连击（升级版.cpp" />
-    <ClCompile Include="P1980 计数问题.cpp" />
-    <ClCompile Include="P1008 三连击.cpp" />
-    <ClCompile Include="P1424 小鱼的航程%28改进版%29.cpp" />
-    <ClCompile Include="P1567 统计天数.cpp" />
-    <ClCompile Include="PrimeTable.h" />
-    <ClCompile Include="打印素数表.cpp" />
-    <ClCompile Include="xxP1047 校门外的树.cpp" />
-    <ClCompile Include="P1914 小书童——密码.cpp" />
-    <ClCompile Include="P1055 ISBN号码.cpp" />
-    <ClCompile Include="P1478 陶陶摘苹果（升级版）.cpp" />
-    <ClCompile Include="P1307 数字反转.cpp" />
-    <ClCompile Include="P1022 计算器的改良.cpp" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="RSA.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RSA.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

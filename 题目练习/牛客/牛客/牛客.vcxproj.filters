@@ -324,5 +324,17 @@
     <ClCompile Include="~24点.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="火星文字典.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="做错座位.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="数学竞技.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="最长湍流子数组.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

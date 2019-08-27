@@ -75,6 +75,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
   <ItemGroup>
+    <ClCompile Include="数学竞赛.cpp" />
     <ClCompile Include="源.cpp" />
   </ItemGroup>
   <ItemDefinitionGroup />

@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{FE5DDB7E-862A-4E34-9D3F-DEAC2FAC6C13}</ProjectGuid>
-    <RootNamespace>CloudClientSys</RootNamespace>
+    <ProjectGuid>{4261806F-8C43-4E02-B372-0F1DC0D17C24}</ProjectGuid>
+    <RootNamespace>Leetcode</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -84,11 +84,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\boost_1_71_0_b1_rc1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <Link>
-      <AdditionalLibraryDirectories>D:\boost_1_71_0_b1_rc1\lib64-msvc-14.2;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -119,11 +115,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CloudClient.hpp" />
-    <ClInclude Include="httplib.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="CloudClient.cpp" />
+    <ClCompile Include="494-Target Sum.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="合唱队形.cpp" />
+    <ClCompile Include="合并内容流.cpp" />
+    <ClCompile Include="版本升级判定.cpp" />
+    <ClCompile Include="考场安排.cpp" />
+    <ClCompile Include="计算累计平方和.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

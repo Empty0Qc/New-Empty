@@ -77,6 +77,7 @@
     <ClCompile Include="~Rational Arithmetic.cpp" />
     <ClCompile Include="乒乓球筐.cpp" />
     <ClCompile Include="五子棋.cpp" />
+    <ClCompile Include="做错座位.cpp" />
     <ClCompile Include="养兔子.cpp" />
     <ClCompile Include="判断点P是否在ABC内.cpp" />
     <ClCompile Include="单词倒排.cpp" />
@@ -90,10 +91,12 @@
     <ClCompile Include="幂次方.cpp" />
     <ClCompile Include="抄送列表.cpp" />
     <ClCompile Include="收件人列表.cpp" />
+    <ClCompile Include="数学竞技.cpp" />
     <ClCompile Include="数据库连接数.cpp" />
     <ClCompile Include="最小公倍数.cpp" />
     <ClCompile Include="最长上升子序列.cpp" />
     <ClCompile Include="最长公共子序列.cpp" />
+    <ClCompile Include="最长湍流子数组.cpp" />
     <ClCompile Include="查找兄弟单词.cpp" />
     <ClCompile Include="母牛生小牛.cpp" />
     <ClCompile Include="求和.cpp" />
@@ -128,6 +131,7 @@
     <ClCompile Include="洗牌.cpp" />
     <ClCompile Include="源.cpp" />
     <ClCompile Include="~24点.cpp" />
+    <ClCompile Include="火星文字典.cpp" />
     <ClCompile Include="火车进站.cpp" />
     <ClCompile Include="字符串通配符.cpp" />
     <ClCompile Include="汽水瓶.cpp" />
