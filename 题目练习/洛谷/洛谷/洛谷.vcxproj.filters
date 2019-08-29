@@ -120,5 +120,11 @@
     <ClCompile Include="P1219 八皇后.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="【滴滴】算式转移.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="递归测试.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
