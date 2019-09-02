@@ -155,3 +155,47 @@
 //	}
 //	return 0;
 //}
+
+
+//#include <iostream>
+//using namespace std;
+//
+//class A
+//{
+//public:
+//	virtual int fun(int a, int b)
+//	{
+//		cout << "A";
+//		return a + b;
+//	}
+//};
+//class C :virtual public A
+//{
+//public:
+//	virtual int fun(int a, int b)
+//	{
+//		cout << "C";
+//		return a + b;
+//	}
+//};
+//class B :virtual public  A, virtual public C
+//{
+//public:
+//	int fun1(int a, int b,char c)
+//	{
+//		cout << "B";
+//		return a + b;
+//	}
+//
+//};
+//
+//int main()
+//{
+//	C* p = new class C;
+//	A* d = p;
+//	cout << d->fun(1, 2);
+//	return 0;
+//}
+
+
+

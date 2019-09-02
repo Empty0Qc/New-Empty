@@ -41,3 +41,115 @@
 //	}
 //	return 0;
 //}
+//
+//
+//#include <iostream>
+//using namespace std;
+//
+//uint64_t ReverseBit(uint64_t num)
+//{
+//	uint64_t ret = 0;
+//	//uint64_t tmp = 1;
+//
+//	int count = 63;
+//	while (count--)
+//	{
+//		ret |= (num & 1);
+//		num <<= 1;
+//		ret <<= 1;
+//	}
+//	return ret;
+//}
+//
+//int main()
+//{
+//	//cout << ReverseBit(1);
+//
+//	return 0;
+//}
+
+
+
+//#include <iostream>
+//#include <vector>
+//#include <algorithm>
+//using namespace std;
+//
+//typedef struct Box {
+//	int o = 0, j = 0;
+//}Box;
+//
+//typedef struct Key {
+//	int o = 0, j = 0;
+//}Key;
+//
+//int main()
+//{
+//	int n, m;
+//	while (cin >> n >> m)
+//	{
+//		Box box;
+//		Key key;
+//		int tmp;
+//		for (int i = 0; i < n; ++i)
+//		{
+//			cin >> tmp;
+//			if (tmp & 1)
+//				++box.j;
+//			else
+//				++box.o;
+//		}
+//		for (int i = 0; i < m; ++i)
+//		{
+//			cin >> tmp;
+//			if (tmp & 1)
+//				++key.j;
+//			else
+//				++key.o;
+//		}
+//		cout << min(box.j, key.o) + min(box.o, key.j) << endl;
+//	}
+//	return 0;
+//}
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+struct Info {
+	int id,a, b;
+};
+
+int main()
+{
+	int n;
+	while (cin >> n)
+	{
+		Info info;
+		int sum = 99999;
+		vector<Info> v;
+		for (int i = 0; i < n; ++i)
+		{
+			cin >> info.a >> info.b;
+			info.id = i;
+			v.push_back(info);
+		}
+		//sort(v.begin(), v.end(), [](Info& m, Info& n) {return m.a > n.a; });
+		int i = 0;
+		do
+		{
+			int tmp = 0;
+			for (auto &e : v)
+			{
+				tmp += (e.a * e.id + e.b * (n - e.id - 1));
+				e.id = (e.id + 1) % n;
+			}
+			sum = min(sum, tmp);
+			++i;
+		} while (i % n != 0);
+		cout << sum << endl;
+	}
+	return 0;
+}

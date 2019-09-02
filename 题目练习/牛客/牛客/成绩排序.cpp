@@ -1,4 +1,4 @@
-////https://www.nowcoder.com/questionTerminal/8e400fd9905747e4acc2aeed7240978b
+//https://www.nowcoder.com/questionTerminal/8e400fd9905747e4acc2aeed7240978b
 //
 //#include <iostream>
 //#include <cstring>
@@ -58,7 +58,7 @@
 //	return 0;
 //}
 
-
+//
 //#include <iostream>
 //#include <vector>
 //#include <string>
