@@ -102,6 +102,7 @@
     <ClCompile Include="P1307 数字反转.cpp" />
     <ClCompile Include="P1022 计算器的改良.cpp" />
     <ClCompile Include="【滴滴】算式转移.cpp" />
+    <ClCompile Include="源.cpp" />
     <ClCompile Include="递归测试.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
