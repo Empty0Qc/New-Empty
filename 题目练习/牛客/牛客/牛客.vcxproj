@@ -146,6 +146,7 @@
     <ClCompile Include="淘宝网店.cpp" />
     <ClCompile Include="猴子分桃.cpp" />
     <ClCompile Include="电话号码.cpp" />
+    <ClCompile Include="科大讯飞.cpp" />
     <ClCompile Include="科学计数法.cpp" />
     <ClCompile Include="简单错误记录.cpp" />
     <ClCompile Include="纸牌游戏.cpp" />
