@@ -89,6 +89,7 @@
     <ClCompile Include="字符串计数.cpp" />
     <ClCompile Include="密码验证合格程序.cpp" />
     <ClCompile Include="幂次方.cpp" />
+    <ClCompile Include="度小满金融.cpp" />
     <ClCompile Include="抄送列表.cpp" />
     <ClCompile Include="收件人列表.cpp" />
     <ClCompile Include="数学竞技.cpp" />
@@ -152,6 +153,7 @@
     <ClCompile Include="纸牌游戏.cpp" />
     <ClCompile Include="组个最小数.cpp" />
     <ClCompile Include="统计每个月兔子总数.cpp" />
+    <ClCompile Include="网易雷火.cpp" />
     <ClCompile Include="美国节日.cpp" />
     <ClCompile Include="翻转数列.cpp" />
     <ClCompile Include="蘑菇阵.cpp" />
