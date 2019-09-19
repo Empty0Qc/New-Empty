@@ -90,6 +90,7 @@
     <ClCompile Include="密码验证合格程序.cpp" />
     <ClCompile Include="幂次方.cpp" />
     <ClCompile Include="度小满金融.cpp" />
+    <ClCompile Include="快手.cpp" />
     <ClCompile Include="抄送列表.cpp" />
     <ClCompile Include="收件人列表.cpp" />
     <ClCompile Include="数学竞技.cpp" />

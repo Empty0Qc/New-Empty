@@ -345,5 +345,8 @@
     <ClCompile Include="度小满金融.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="快手.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
