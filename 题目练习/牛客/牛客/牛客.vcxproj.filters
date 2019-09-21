@@ -348,5 +348,11 @@
     <ClCompile Include="快手.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="疯狂游戏.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="腾讯笔试.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

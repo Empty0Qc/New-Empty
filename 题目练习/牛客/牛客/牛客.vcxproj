@@ -148,6 +148,7 @@
     <ClCompile Include="淘宝网店.cpp" />
     <ClCompile Include="猴子分桃.cpp" />
     <ClCompile Include="电话号码.cpp" />
+    <ClCompile Include="疯狂游戏.cpp" />
     <ClCompile Include="科大讯飞.cpp" />
     <ClCompile Include="科学计数法.cpp" />
     <ClCompile Include="简单错误记录.cpp" />
@@ -157,6 +158,7 @@
     <ClCompile Include="网易雷火.cpp" />
     <ClCompile Include="美国节日.cpp" />
     <ClCompile Include="翻转数列.cpp" />
+    <ClCompile Include="腾讯笔试.cpp" />
     <ClCompile Include="蘑菇阵.cpp" />
     <ClCompile Include="计算字符串的距离.cpp" />
     <ClCompile Include="质数因子.cpp" />
