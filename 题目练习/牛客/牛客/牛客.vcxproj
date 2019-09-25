@@ -157,6 +157,7 @@
     <ClCompile Include="统计每个月兔子总数.cpp" />
     <ClCompile Include="网易雷火.cpp" />
     <ClCompile Include="美国节日.cpp" />
+    <ClCompile Include="美图.cpp" />
     <ClCompile Include="翻转数列.cpp" />
     <ClCompile Include="腾讯笔试.cpp" />
     <ClCompile Include="蘑菇阵.cpp" />
