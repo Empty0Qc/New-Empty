@@ -146,6 +146,7 @@
     <ClCompile Include="[编程题]构造回文.cpp" />
     <ClCompile Include="个位数统计.cpp" />
     <ClCompile Include="淘宝网店.cpp" />
+    <ClCompile Include="牛客.cpp" />
     <ClCompile Include="猴子分桃.cpp" />
     <ClCompile Include="电话号码.cpp" />
     <ClCompile Include="疯狂游戏.cpp" />
