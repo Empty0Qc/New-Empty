@@ -360,5 +360,17 @@
     <ClCompile Include="牛客.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="巨人.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="长汀科技.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="长亭科技.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="野人过河.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
